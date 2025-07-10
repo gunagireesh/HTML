@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>India Travel Explorer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e0c3fc, #8ec5fc, rgb(2, 21, 227));
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .state-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+      animation: fadeIn 1s ease;
+    }
+
+    .state-card {
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .state-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .state-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+
+    .state-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .state-name {
+      margin-top: 10px;
+      font-size: 0.95em;
+      font-weight: 600;
+      color: #34495e;
+    }
+
+    .place, .place-detail {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      background-color: #ffffffdd;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      margin-bottom: 20px;
+      cursor: pointer;
+      animation: fadeInUp 0.5s ease;
+    }
+
+    .place:hover {
+      transform: scale(1.01);
+    }
+
+    .place img, .place-detail img {
+      width: 160px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .place-info h3 {
+      margin: 0 0 8px;
+      color: #2c3e50;
+    }
+
+    .back-btn {
+      margin-bottom: 20px;
+      display: inline-block;
+      padding: 10px 20px;
+      background: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .back-btn:hover {
+      background: #1a242f;
+    }
+
+    #places-view, #detail-view {
+      display: none;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    #place-detail h2 {
+      color: #2c3e50;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media screen and (max-width: 768px) {
+      .place, .place-detail {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .place img, .place-detail img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>India Travel Explorer</h1>
+<div class="state-gallery" id="state-gallery">
+  <div class="state-card" data-state="AndhraPradesh">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-andhra-pradesh-map-political-administrative-map-andhra-pradesh-with-districts_622214-740.jpg" alt="Andhra Pradesh" />
+  </div>
+  <div class="state-name">Andhra Pradesh</div>
+</div>
+
+<div class="state-card" data-state="Arunachal Pradesh">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-arunachal-pradesh-map-political-administrative-map-arunachal-pradesh-with-districts_622214-741.jpg" alt="Arunachal Pradesh" />
+  </div>
+  <div class="state-name">Arunachal Pradesh</div>
+</div>
+
+<div class="state-card" data-state="Assam">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-assam-map-political-administrative-map-assam-with-districts_622214-742.jpg" alt="Assam" />
+  </div>
+  <div class="state-name">Assam</div>
+</div>
+
+<div class="state-card" data-state="Bihar">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-bihar-map-political-administrative-map-bihar-with-districts_622214-742.jpg" alt="Bihar" />
+  </div>
+  <div class="state-name">Bihar</div>
+</div>
+
+<div class="state-card" data-state="Chhattisgarh">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-chhattisgarh-map-political-administrative-map-chhattisgarh-with-districts_622214-743.jpg" alt="Chhattisgarh" />
+  </div>
+  <div class="state-name">Chhattisgarh</div>
+</div>
+
+<div class="state-card" data-state="Goa">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-goa-map-political-administrative-map-goa-with-districts_622214-747.jpg" alt="Goa" />
+  </div>
+  <div class="state-name">Goa</div>
+</div>
+
+<div class="state-card" data-state="Gujarat">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-gujarat-map-political-administrative-map-gujarat-with-districts_622214-748.jpg" alt="Gujarat" />
+  </div>
+  <div class="state-name">Gujarat</div>
+</div>
+
+<div class="state-card" data-state="Haryana">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-haryana-map-political-administrative-map-haryana-with-districts_622214-749.jpg" alt="Haryana" />
+  </div>
+  <div class="state-name">Haryana</div>
+</div>
+
+<div class="state-card" data-state="Himachal Pradesh">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-himachal-pradesh-map-political-administrative-map-himachal-pradesh_622214-750.jpg" alt="Himachal Pradesh" />
+  </div>
+  <div class="state-name">Himachal Pradesh</div>
+</div>
+
+<div class="state-card" data-state="Jharkhand">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-jharkhand-map-political-administrative-map-jharkhand-with-districts_622214-751.jpg" alt="Jharkhand" />
+  </div>
+  <div class="state-name">Jharkhand</div>
+</div>
+
+<div class="state-card" data-state="Karnataka">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-karnataka-map-political-administrative-map-karnataka-with-districts_622214-752.jpg" alt="Karnataka" />
+  </div>
+  <div class="state-name">Karnataka</div>
+</div>
+
+<div class="state-card" data-state="Kerala">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-kerala-map-political-administrative-map-kerala-with-districts_622214-753.jpg" alt="Kerala" />
+  </div>
+  <div class="state-name">Kerala</div>
+</div>
+
+<div class="state-card" data-state="Madhya Pradesh">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-madhya-pradesh-map-political-administrative-map-madhya-pradesh-with-districts_622214-754.jpg" alt="Madhya Pradesh" />
+  </div>
+  <div class="state-name">Madhya Pradesh</div>
+</div>
+
+<div class="state-card" data-state="Maharashtra">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-maharashtra-map-political-administrative-map-maharashtra-with-districts_622214-755.jpg" alt="Maharashtra" />
+  </div>
+  <div class="state-name">Maharashtra</div>
+</div>
+
+<div class="state-card" data-state="Manipur">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-manipur-map-political-administrative-map-manipur-with-districts_622214-756.jpg" alt="Manipur" />
+  </div>
+  <div class="state-name">Manipur</div>
+</div>
+
+<div class="state-card" data-state="Meghalaya">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-meghalaya-map-political-administrative-map-meghalaya-with-districts_622214-757.jpg" alt="Meghalaya" />
+  </div>
+  <div class="state-name">Meghalaya</div>
+</div>
+
+<div class="state-card" data-state="Mizoram">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-mizoram-map-political-administrative-map-mizoram-with-districts_622214-758.jpg" alt="Mizoram" />
+  </div>
+  <div class="state-name">Mizoram</div>
+</div>
+
+<div class="state-card" data-state="Nagaland">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-nagaland-map-political-administrative-map-nagaland-with-districts_622214-759.jpg" alt="Nagaland" />
+  </div>
+  <div class="state-name">Nagaland</div>
+</div>
+
+<div class="state-card" data-state="Odisha">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-odisha-map-political-administrative-map-odisha-with-districts_622214-760.jpg" alt="Odisha" />
+  </div>
+  <div class="state-name">Odisha</div>
+</div>
+
+<div class="state-card" data-state="Punjab">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-punjab-map-political-administrative-map-punjab-with-districts_622214-761.jpg" alt="Punjab" />
+  </div>
+  <div class="state-name">Punjab</div>
+</div>
+
+<div class="state-card" data-state="Rajasthan">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-rajasthan-map-political-administrative-map-rajasthan-with-districts_622214-762.jpg" alt="Rajasthan" />
+  </div>
+  <div class="state-name">Rajasthan</div>
+</div>
+
+<div class="state-card" data-state="Sikkim">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-sikkim-map-political-administrative-map-sikkim-with-districts_622214-763.jpg" alt="Sikkim" />
+  </div>
+  <div class="state-name">Sikkim</div>
+</div>
+
+<div class="state-card" data-state="Tamil Nadu">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-tamil-nadu-map-political-administrative-map-tamil-nadu-with-districts_622214-764.jpg" alt="Tamil Nadu" />
+  </div>
+  <div class="state-name">Tamil Nadu</div>
+</div>
+
+<div class="state-card" data-state="Telangana">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-telangana-map-political-administrative-map-telangana-with-districts_622214-765.jpg" alt="Telangana" />
+  </div>
+  <div class="state-name">Telangana</div>
+</div>
+
+<div class="state-card" data-state="Tripura">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-tripura-map-political-administrative-map-tripura-with-districts_622214-766.jpg" alt="Tripura" />
+  </div>
+  <div class="state-name">Tripura</div>
+</div>
+
+<div class="state-card" data-state="Uttar Pradesh">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-uttar-pradesh-map-political-administrative-map-uttar-pradesh-with-districts_622214-767.jpg" alt="Uttar Pradesh" />
+  </div>
+  <div class="state-name">Uttar Pradesh</div>
+</div>
+
+<div class="state-card" data-state="Uttarakhand">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-uttarakhand-map-political-administrative-map-uttarakhand-with-districts_622214-768.jpg" alt="Uttarakhand" />
+  </div>
+  <div class="state-name">Uttarakhand</div>
+</div>
+
+<div class="state-card" data-state="West Bengal">
+  <div class="state-image">
+    <img src="https://img.freepik.com/premium-vector/sky-blue-color-west-bengal-map-political-administrative-map-west-bengal-with-districts_622214-769.jpg" alt="West Bengal" />
+  </div>
+  <div class="state-name">West Bengal</div>
+</div>
+
+  </div>
+</div>
+
+<div id="places-view">
+  <button class="back-btn" onclick="goBackToStates()">← Back to States</button>
+  <h2 id="state-title"></h2>
+  <div id="places-list"></div>
+</div>
+
+<div id="detail-view">
+  <button class="back-btn" onclick="goBackToPlaces()">← Back to Attractions</button>
+  <div id="place-detail"></div>
+</div>
+
+<script>
+  const attractions = {
+    AndhraPradesh: [
+      {
+        name: "Amaravati Stupa",
+        image: "https://upload.wikimedia.org/wikipedia/commons/e/eb/Amaravati_Stupa_Remains_01.jpg",
+        description: "Ancient Buddhist monument in Amaravati showcasing exquisite sculptures.",
+        transport: "Vijayawada Airport (35 km), Amaravati Bus Stand nearby, taxis and autos available.",
+        importance: "Historical center of Buddhist learning and pilgrimage from the Satavahana period."
+      },
+    {
+      name: "Araku Valley",
+      image: "https://upload.wikimedia.org/wikipedia/commons/7/75/Araku_Valley_View.jpg",
+      description: "Picturesque hill station known for coffee plantations and tribal culture.",
+      transport: "Visakhapatnam Airport (110 km), Araku Railway Station, buses and cabs from Vizag.",
+      importance: "Popular eco-tourism and trekking destination, rich in biodiversity and tribal heritage."
+    }
+  ],
+  ArunachalPradesh: [
+    {
+      name: "Tawang Monastery",
+      image: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Tawang_Monastery_2009.jpg",
+      description: "One of the largest Buddhist monasteries in India, located in Tawang.",
+      transport: "Tezpur Airport + road, or rail to Guwahati then bus/road to Tawang.",
+      importance: "Spiritual heart of the Monpa culture and key center for Tibetan Buddhism."  
+    },
+    {
+      name: "Sela Pass",
+      image: "https://upload.wikimedia.org/wikipedia/commons/6/67/Sela_Pass_in_Winter.jpg",
+      description: "High-altitude pass offering breathtaking Himalayan scenery near Tawang.",
+      transport: "Accessible by road from Tawang; small detours along the route.",
+      importance: "Stunning natural beauty and revered by locals (Sela Lake nearby)."  
+    }
+  ],
+  Assam: [
+    {
+      name: "Kaziranga National Park",
+      image: "https://upload.wikimedia.org/wikipedia/commons/4/43/One-horned_Rhinoceros_in_Kaziranga.jpg",
+      description: "World-famous park in Assam home to the one-horned rhinoceros.",
+      transport: "Jorhat/Tezpur Airport, Guwahati Railway Station + road transport.",
+      importance: "UNESCO World Heritage site protecting rhinos, tigers & elephants."  
+    },
+    {
+      name: "Kamakhya Temple",
+      image: "https://upload.wikimedia.org/wikipedia/commons/7/70/Kamakhya_Temple_Guwahati.jpg",
+      description: "Ancient tantric temple on Nilachal Hill in Guwahati.",
+      transport: "Guwahati Airport/Railway + city buses or taxis.",
+      importance: "Major Shakti pilgrimage site and center of tantric worship."  
+    }
+  ],
+  Bihar: [
+    {
+      name: "Mahabodhi Temple",
+      image: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Mahabodhi_Temple_Bodh_Gaya.jpg",
+      description: "UNESCO World Heritage site in Bodh Gaya where Buddha attained enlightenment.",
+      transport: "Gaya Airport/Railway, bus/taxi connections.",
+      importance: "One of Buddhism’s most sacred sites globally."  
+    },
+    {
+      name: "Nalanda University Ruins",
+      image: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Nalanda_ruins_panorama.jpg",
+      description: "Remains of ancient seat of learning, once the world’s oldest residential university.",
+      transport: "Patna Airport + road/rail to Nalanda.",
+      importance: "Iconic symbol of India's academic heritage and early global learning."  
+    }
+  ],
+  Chhattisgarh: [
+    {
+      name: "Chitrakote Falls",
+      image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Chitrakot_Falls_Bastar.jpg",
+      description: "Spectacular waterfall on the Indravati River, often called the ‘Niagara of India’.",
+      transport: "Raipur Airport/Railway + road to Jagdalpur and onward transport.",
+      importance: "Iconic natural wonder and one of India’s widest waterfalls."  
+    },
+    {
+      name: "Barnawapara Wildlife Sanctuary",
+      image: "https://upload.wikimedia.org/wikipedia/commons/9/99/Wildlife_sanctuary_Barnawapara.jpg",
+      description: "Dense wildlife reserve with forests, riverine habitats, and diverse fauna.",
+      transport: "Raipur Airport + road transport to sanctuary.",
+      importance: "Habitat for tigers, leopards and rare birds."  
+    }
+  ],
+
+  Rajasthan: [
+      {
+        name: "Amber Fort",
+        image: "https://s3.india.com/travel/wp-content/uploads/2014/09/amber-fort.jpg",
+        description: "A beautiful fort with artistic architecture near Jaipur.",
+        transport: "Jaipur Airport (13 km), Jaipur Railway Station (11 km), taxis and buses available.",
+        importance: "UNESCO site representing Rajputana glory with mirror work, gardens, and courtyards.",
+        history: "Built in the 16th century by Raja Man Singh I, the fort showcases a blend of Hindu and Mughal architecture.",
+        bestTimeToVisit: "October to March",
+        entryFee: "₹100 (Indians), ₹550 (Foreigners)",
+        timings: "8:00 AM to 5:30 PM",
+        nearbyAttractions: ["Jaigarh Fort", "Jal Mahal", "Nahargarh Fort"],
+        tips: "Wear comfortable shoes as you’ll be walking a lot. Early morning visits are best to avoid crowds."
+      },
+      {
+        name: "City Palace, Udaipur",
+        image: "https://upload.wikimedia.org/wikipedia/commons/6/60/Udaipur_City_Palace_Panorama.jpg",
+        description: "A majestic palace complex overlooking Lake Pichola in Udaipur.",
+        transport: "Udaipur Airport (24 km), Udaipur Railway Station (4 km), taxis and auto-rickshaws available.",
+        importance: "Blend of Rajasthani and Mughal architecture; home to museums, courtyards, and stunning lake views."
+      }
+    ],
+    TamilNadu: [
+      {
+        name: "Meenakshi Temple",
+        image: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Meenakshi_Temple%2C_Madurai%2C_Tamil_Nadu%2C_India.jpg",
+        description: "Historic temple in Madurai with stunning sculptures.",
+        transport: "Madurai airport and city buses available.",
+        importance: "Cultural and religious center, known for Dravidian architecture and temple festivals."
+      }
+    ],
+    Maharashtra: [
+      {
+        name: "Gateway of India",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Gateway_of_India_Mumbai_03-2016_img3.jpg/320px-Gateway_of_India_Mumbai_03-2016_img3.jpg",
+        description: "Iconic sea-facing monument in Mumbai.",
+        transport: "Mumbai Airport, CST Railway Station, autos and taxis available.",
+        importance: "Historical arrival point for British dignitaries, a symbol of colonial heritage."
+      }
+    ],
+    Karnataka: [
+      {
+        name: "Mysore Palace",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Mysore_Palace_Night_View.jpg/320px-Mysore_Palace_Night_View.jpg",
+        description: "Famous royal palace in Mysore.",
+        transport: "Mysuru Airport, Mysore Junction, local buses and cabs.",
+        importance: "Example of Indo-Saracenic architecture and home to the Wadiyar dynasty."
+      }
+    ],
+    Kerala: [
+      {
+        name: "Alleppey Backwaters",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Houseboat_in_Alleppey.jpg/320px-Houseboat_in_Alleppey.jpg",
+        description: "Scenic houseboat cruises through lagoons.",
+        transport: "Cochin Airport, Alleppey Railway Station, local boats and taxis.",
+        importance: "Key ecotourism site offering traditional Kerala culture and nature experiences."
+      }
+    ]
+  };
+
+let currentState = "";
+  let currentPlaceIndex = 0;
+
+  function showPlaces(state) {
+    currentState = state;
+    document.getElementById("state-gallery").style.display = "none";
+    document.getElementById("places-view").style.display = "block";
+    document.getElementById("state-title").textContent = `Top Places in ${state}`;
+    const container = document.getElementById("places-list");
+    container.innerHTML = "";
+
+    attractions[state].forEach((place, index) => {
+      const placeDiv = document.createElement("div");
+      placeDiv.className = "place";
+      placeDiv.innerHTML = `
+        <img src="${place.image}" alt="${place.name}" />
+        <div class="place-info">
+          <h3>${place.name}</h3>
+          <p>${place.description}</p>
+          <strong>Transport:</strong> ${place.transport}
+        </div>`;
+      placeDiv.onclick = () => showPlaceDetail(index);
+      container.appendChild(placeDiv);
+    });
+  }
+
+  function showPlaceDetail(index) {
+  currentPlaceIndex = index;
+  const place = attractions[currentState][index];
+
+  const {
+    name,
+    image,
+    description,
+    importance,
+    transport,
+    history,
+    bestTimeToVisit,
+    entryFee,
+    timings,
+    nearbyAttractions,
+    tips
+  } = place;
+
+  document.getElementById("places-view").style.display = "none";
+  document.getElementById("detail-view").style.display = "block";
+
+  let detailHTML = `
+    <h2>${name}</h2>
+    <img src="${image}" alt="${name}" />
+    <p><strong>Description:</strong> ${description}</p>
+    <p><strong>Importance:</strong> ${importance}</p>
+    <p><strong>Transport:</strong> ${transport}</p>
+  `;
+
+  if (history) detailHTML += `<p><strong>History:</strong> ${history}</p>`;
+  if (bestTimeToVisit) detailHTML += `<p><strong>Best Time to Visit:</strong> ${bestTimeToVisit}</p>`;
+  if (entryFee) detailHTML += `<p><strong>Entry Fee:</strong> ${entryFee}</p>`;
+  if (timings) detailHTML += `<p><strong>Timings:</strong> ${timings}</p>`;
+  if (nearbyAttractions) detailHTML += `<p><strong>Nearby Attractions:</strong> ${nearbyAttractions.join(", ")}</p>`;
+  if (tips) detailHTML += `<p><strong>Travel Tips:</strong> ${tips}</p>`;
+
+  document.getElementById("place-detail").innerHTML = detailHTML;
+}
+
+
+  function goBackToStates() {
+    document.getElementById("state-gallery").style.display = "flex";
+    document.getElementById("places-view").style.display = "none";
+  }
+
+  function goBackToPlaces() {
+    document.getElementById("places-view").style.display = "block";
+    document.getElementById("detail-view").style.display = "none";
+  }
+
+  document.querySelectorAll(".state-card").forEach(card => {
+    card.addEventListener("click", () => {
+      const state = card.dataset.state;
+      showPlaces(state);
+    });
+  });
+</script>
+
+</body>
+</html>

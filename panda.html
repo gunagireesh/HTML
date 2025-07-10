@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>India Travel Explorer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .state-gallery {
+  display: grid !important; /* force grid even if overridden */
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+  animation: fadeIn 1s ease;
+}
+
+    }
+
+    .state-card {
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .state-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .state-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+
+    .state-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .state-name {
+      margin-top: 10px;
+      font-size: 0.95em;
+      font-weight: 600;
+      color: #34495e;
+    }
+
+    .place, .place-detail {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      background-color: #ffffffdd;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      margin-bottom: 20px;
+      cursor: pointer;
+      animation: fadeInUp 0.5s ease;
+    }
+
+    .place:hover {
+      transform: scale(1.01);
+    }
+
+    .place img, .place-detail img {
+      width: 160px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .place-info h3 {
+      margin: 0 0 8px;
+      color: #2c3e50;
+    }
+
+    .back-btn {
+      margin-bottom: 20px;
+      display: inline-block;
+      padding: 10px 20px;
+      background: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .back-btn:hover {
+      background: #1a242f;
+    }
+
+    #places-view, #detail-view {
+      display: none;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    #place-detail h2 {
+      color: #2c3e50;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media screen and (max-width: 768px) {
+      .place, .place-detail {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .place img, .place-detail img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>India Travel Explorer</h1>
+<div class="state-gallery" id="state-gallery">
+  <div class="state-card" data-state="Andhra Pradesh">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Andhra Pradesh" />
+  </div>
+  <div class="state-name">Andhra Pradesh</div>
+</div>
+
+<div class="state-card" data-state="Arunachal Pradesh">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Arunachal Pradesh" />
+  </div>
+  <div class="state-name">Arunachal Pradesh</div>
+</div>
+
+<div class="state-card" data-state="Assam">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Assam" />
+  </div>
+  <div class="state-name">Assam</div>
+</div>
+
+<div class="state-card" data-state="Bihar">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Bihar" />
+  </div>
+  <div class="state-name">Bihar</div>
+</div>
+
+<div class="state-card" data-state="Chhattisgarh">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Chhattisgarh" />
+  </div>
+  <div class="state-name">Chhattisgarh</div>
+</div>
+
+<div class="state-card" data-state="Goa">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Goa" />
+  </div>
+  <div class="state-name">Goa</div>
+</div>
+
+<div class="state-card" data-state="Gujarat">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Gujarat" />
+  </div>
+  <div class="state-name">Gujarat</div>
+</div>
+
+<div class="state-card" data-state="Haryana">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Haryana" />
+  </div>
+  <div class="state-name">Haryana</div>
+</div>
+
+<div class="state-card" data-state="Himachal Pradesh">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Himachal Pradesh" />
+  </div>
+  <div class="state-name">Himachal Pradesh</div>
+</div>
+
+<div class="state-card" data-state="Jharkhand">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Jharkhand" />
+  </div>
+  <div class="state-name">Jharkhand</div>
+</div>
+
+<div class="state-card" data-state="Karnataka">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Karnataka" />
+  </div>
+  <div class="state-name">Karnataka</div>
+</div>
+
+<div class="state-card" data-state="Kerala">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Kerala" />
+  </div>
+  <div class="state-name">Kerala</div>
+</div>
+
+<div class="state-card" data-state="Madhya Pradesh">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Madhya Pradesh" />
+  </div>
+  <div class="state-name">Madhya Pradesh</div>
+</div>
+
+<div class="state-card" data-state="Maharashtra">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Maharashtra" />
+  </div>
+  <div class="state-name">Maharashtra</div>
+</div>
+
+<div class="state-card" data-state="Manipur">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Manipur" />
+  </div>
+  <div class="state-name">Manipur</div>
+</div>
+
+<div class="state-card" data-state="Meghalaya">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Meghalaya" />
+  </div>
+  <div class="state-name">Meghalaya</div>
+</div>
+
+<div class="state-card" data-state="Mizoram">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Mizoram" />
+  </div>
+  <div class="state-name">Mizoram</div>
+</div>
+
+<div class="state-card" data-state="Nagaland">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Nagaland" />
+  </div>
+  <div class="state-name">Nagaland</div>
+</div>
+
+<div class="state-card" data-state="Odisha">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Odisha" />
+  </div>
+  <div class="state-name">Odisha</div>
+</div>
+
+<div class="state-card" data-state="Punjab">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Punjab" />
+  </div>
+  <div class="state-name">Punjab</div>
+</div>
+
+<div class="state-card" data-state="Rajasthan">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Rajasthan" />
+  </div>
+  <div class="state-name">Rajasthan</div>
+</div>
+
+<div class="state-card" data-state="Sikkim">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Sikkim" />
+  </div>
+  <div class="state-name">Sikkim</div>
+</div>
+
+<div class="state-card" data-state="Tamil Nadu">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Tamil Nadu" />
+  </div>
+  <div class="state-name">Tamil Nadu</div>
+</div>
+
+<div class="state-card" data-state="Telangana">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Telangana" />
+  </div>
+  <div class="state-name">Telangana</div>
+</div>
+
+<div class="state-card" data-state="Tripura">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Tripura" />
+  </div>
+  <div class="state-name">Tripura</div>
+</div>
+
+<div class="state-card" data-state="Uttar Pradesh">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Uttar Pradesh" />
+  </div>
+  <div class="state-name">Uttar Pradesh</div>
+</div>
+
+<div class="state-card" data-state="Uttarakhand">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="Uttarakhand" />
+  </div>
+  <div class="state-name">Uttarakhand</div>
+</div>
+
+<div class="state-card" data-state="West Bengal">
+  <div class="state-image">
+    <img src="https://media.istockphoto.com/id/539113690/photo/giant-panda-baby-cub-in-chengdu-area-china.jpg?s=612x612&w=0&k=20&c=2ymtVJuDV_c_qxQrXDzNvd8W6dfh2_V6W7ExxXAaWps=" alt="West Bengal" />
+  </div>
+  <div class="state-name">West Bengal</div>
+</div>
+
+  </div>
+</div>
+
+<div id="places-view">
+  <button class="back-btn" onclick="goBackToStates()">← Back to States</button>
+  <h2 id="state-title"></h2>
+  <div id="places-list"></div>
+</div>
+
+<div id="detail-view">
+  <button class="back-btn" onclick="goBackToPlaces()">← Back to Attractions</button>
+  <div id="place-detail"></div>
+</div>
+
+<script>
+  const attractions = {
+    AndhraPradesh: [
+    {
+      name: "Amaravati Stupa",
+      image: "https://upload.wikimedia.org/wikipedia/commons/e/eb/Amaravati_Stupa_Remains_01.jpg",
+      description: "Ancient Buddhist monument in Amaravati showcasing exquisite sculptures.",
+      transport: "Vijayawada Airport (35 km), Amaravati Bus Stand nearby, taxis and autos available.",
+      importance: "Historical center of Buddhist learning and pilgrimage from the Satavahana period."
+    },
+    {
+      name: "Araku Valley",
+      image: "https://upload.wikimedia.org/wikipedia/commons/7/75/Araku_Valley_View.jpg",
+      description: "Picturesque hill station known for coffee plantations and tribal culture.",
+      transport: "Visakhapatnam Airport (110 km), Araku Railway Station, buses and cabs from Vizag.",
+      importance: "Popular eco-tourism and trekking destination, rich in biodiversity and tribal heritage."
+    }
+  ],
+  ArunachalPradesh: [
+    {
+      name: "Tawang Monastery",
+      image: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Tawang_Monastery_2009.jpg",
+      description: "One of the largest Buddhist monasteries in India, located in Tawang.",
+      transport: "Tezpur Airport + road, or rail to Guwahati then bus/road to Tawang.",
+      importance: "Spiritual heart of the Monpa culture and key center for Tibetan Buddhism."  
+    },
+    {
+      name: "Sela Pass",
+      image: "https://upload.wikimedia.org/wikipedia/commons/6/67/Sela_Pass_in_Winter.jpg",
+      description: "High-altitude pass offering breathtaking Himalayan scenery near Tawang.",
+      transport: "Accessible by road from Tawang; small detours along the route.",
+      importance: "Stunning natural beauty and revered by locals (Sela Lake nearby)."  
+    }
+  ],
+  Assam: [
+    {
+      name: "Kaziranga National Park",
+      image: "https://upload.wikimedia.org/wikipedia/commons/4/43/One-horned_Rhinoceros_in_Kaziranga.jpg",
+      description: "World-famous park in Assam home to the one-horned rhinoceros.",
+      transport: "Jorhat/Tezpur Airport, Guwahati Railway Station + road transport.",
+      importance: "UNESCO World Heritage site protecting rhinos, tigers & elephants."  
+    },
+    {
+      name: "Kamakhya Temple",
+      image: "https://upload.wikimedia.org/wikipedia/commons/7/70/Kamakhya_Temple_Guwahati.jpg",
+      description: "Ancient tantric temple on Nilachal Hill in Guwahati.",
+      transport: "Guwahati Airport/Railway + city buses or taxis.",
+      importance: "Major Shakti pilgrimage site and center of tantric worship."  
+    }
+  ],
+  Bihar: [
+    {
+      name: "Mahabodhi Temple",
+      image: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Mahabodhi_Temple_Bodh_Gaya.jpg",
+      description: "UNESCO World Heritage site in Bodh Gaya where Buddha attained enlightenment.",
+      transport: "Gaya Airport/Railway, bus/taxi connections.",
+      importance: "One of Buddhism’s most sacred sites globally."  
+    },
+    {
+      name: "Nalanda University Ruins",
+      image: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Nalanda_ruins_panorama.jpg",
+      description: "Remains of ancient seat of learning, once the world’s oldest residential university.",
+      transport: "Patna Airport + road/rail to Nalanda.",
+      importance: "Iconic symbol of India's academic heritage and early global learning."  
+    }
+  ],
+  Chhattisgarh: [
+    {
+      name: "Chitrakote Falls",
+      image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Chitrakot_Falls_Bastar.jpg",
+      description: "Spectacular waterfall on the Indravati River, often called the ‘Niagara of India’.",
+      transport: "Raipur Airport/Railway + road to Jagdalpur and onward transport.",
+      importance: "Iconic natural wonder and one of India’s widest waterfalls."  
+    },
+    {
+      name: "Barnawapara Wildlife Sanctuary",
+      image: "https://upload.wikimedia.org/wikipedia/commons/9/99/Wildlife_sanctuary_Barnawapara.jpg",
+      description: "Dense wildlife reserve with forests, riverine habitats, and diverse fauna.",
+      transport: "Raipur Airport + road transport to sanctuary.",
+      importance: "Habitat for tigers, leopards and rare birds."  
+    }
+  ],
+
+  Rajasthan: [
+      {
+        name: "Amber Fort",
+        image: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Amber_Fort_-_Jaipur_-_Rajasthan_-_India.jpg",
+        description: "A beautiful fort with artistic architecture near Jaipur.",
+        transport: "Jaipur Airport (13 km), Jaipur Railway Station (11 km), taxis and buses available.",
+        importance: "UNESCO site representing Rajputana glory with mirror work, gardens, and courtyards."
+      },
+      {
+        name: "City Palace, Udaipur",
+        image: "https://upload.wikimedia.org/wikipedia/commons/6/60/Udaipur_City_Palace_Panorama.jpg",
+        description: "A majestic palace complex overlooking Lake Pichola in Udaipur.",
+        transport: "Udaipur Airport (24 km), Udaipur Railway Station (4 km), taxis and auto-rickshaws available.",
+        importance: "Blend of Rajasthani and Mughal architecture; home to museums, courtyards, and stunning lake views."
+      }
+    ],
+    TamilNadu: [
+      {
+        name: "Meenakshi Temple",
+        image: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Meenakshi_Temple%2C_Madurai%2C_Tamil_Nadu%2C_India.jpg",
+        description: "Historic temple in Madurai with stunning sculptures.",
+        transport: "Madurai airport and city buses available.",
+        importance: "Cultural and religious center, known for Dravidian architecture and temple festivals."
+      }
+    ],
+    Maharashtra: [
+      {
+        name: "Gateway of India",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Gateway_of_India_Mumbai_03-2016_img3.jpg/320px-Gateway_of_India_Mumbai_03-2016_img3.jpg",
+        description: "Iconic sea-facing monument in Mumbai.",
+        transport: "Mumbai Airport, CST Railway Station, autos and taxis available.",
+        importance: "Historical arrival point for British dignitaries, a symbol of colonial heritage."
+      }
+    ],
+    Karnataka: [
+      {
+        name: "Mysore Palace",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Mysore_Palace_Night_View.jpg/320px-Mysore_Palace_Night_View.jpg",
+        description: "Famous royal palace in Mysore.",
+        transport: "Mysuru Airport, Mysore Junction, local buses and cabs.",
+        importance: "Example of Indo-Saracenic architecture and home to the Wadiyar dynasty."
+      }
+    ],
+    Kerala: [
+      {
+        name: "Alleppey Backwaters",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Houseboat_in_Alleppey.jpg/320px-Houseboat_in_Alleppey.jpg",
+        description: "Scenic houseboat cruises through lagoons.",
+        transport: "Cochin Airport, Alleppey Railway Station, local boats and taxis.",
+        importance: "Key ecotourism site offering traditional Kerala culture and nature experiences."
+      }
+    ]
+  };
+
+let currentState = "";
+  let currentPlaceIndex = 0;
+
+  function showPlaces(state) {
+    currentState = state;
+    document.getElementById("state-gallery").style.display = "none";
+    document.getElementById("places-view").style.display = "block";
+    document.getElementById("state-title").textContent = `Top Places in ${state}`;
+    const container = document.getElementById("places-list");
+    container.innerHTML = "";
+
+    attractions[state].forEach((place, index) => {
+      const placeDiv = document.createElement("div");
+      placeDiv.className = "place";
+      placeDiv.innerHTML = `
+        <img src="${place.image}" alt="${place.name}" />
+        <div class="place-info">
+          <h3>${place.name}</h3>
+          <p>${place.description}</p>
+          <strong>Transport:</strong> ${place.transport}
+        </div>`;
+      placeDiv.onclick = () => showPlaceDetail(index);
+      container.appendChild(placeDiv);
+    });
+  }
+
+  function showPlaceDetail(index) {
+    currentPlaceIndex = index;
+    const place = attractions[currentState][index];
+    document.getElementById("places-view").style.display = "none";
+    document.getElementById("detail-view").style.display = "block";
+    document.getElementById("place-detail").innerHTML = `
+      <h2>${place.name}</h2>
+      <img src="${place.image}" alt="${place.name}" />
+      <p><strong>Description:</strong> ${place.description}</p>
+      <p><strong>Importance:</strong> ${place.importance}</p>
+      <p><strong>Transport:</strong> ${place.transport}</p>`;
+  }
+
+  function goBackToStates() {
+  const gallery = document.getElementById("state-gallery");
+  gallery.style.display = "grid"; // ensure grid view is restored
+  document.getElementById("places-view").style.display = "none";
+}
+
+  }
+
+  function goBackToPlaces() {
+    document.getElementById("places-view").style.display = "block";
+    document.getElementById("detail-view").style.display = "none";
+  }
+
+  document.querySelectorAll(".state-card").forEach(card => {
+    card.addEventListener("click", () => {
+      const state = card.dataset.state;
+      showPlaces(state);
+    });
+  });
+</script>
+
+</body>
+</html>
