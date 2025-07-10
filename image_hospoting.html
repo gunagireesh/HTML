@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>World Tourist Hotspots</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background: #1e88e5;
+      color: white;
+      margin: 0;
+    }
+    .map-container {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      margin: 30px auto;
+    }
+    .world-map {
+      width: 100%;
+      display: block;
+    }
+    .hotspot {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: red;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid white;
+      transition: transform 0.2s;
+    }
+    .hotspot:hover {
+      transform: scale(1.8);
+    }
+    .info-box {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: white;
+      border: 1px solid #ccc;
+      padding: 15px;
+      width: 250px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      display: none;
+    }
+    .info-box h3 {
+      margin-top: 0;
+      color: #1e88e5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Explore World Tourist Attractions</h1>
+  <div class="map-container">
+    <img src="https://geology.com/world/world-map.gif" class="world-map">
+
+    <!-- Hotspots -->
+    <div class="hotspot" style="top: 50%; left: 68%;" onclick="showInfo('india')"></div>
+    <div class="hotspot" style="top: 39%; left: 48%;" onclick="showInfo('france')"></div>
+    <div class="hotspot" style="top: 40%; left: 20%;" onclick="showInfo('usa')"></div>
+    <div class="hotspot" style="top: 75%; left: 80%;" onclick="showInfo('australia')"></div>
+    <div class="hotspot" style="top: 30%; left: 45%;" onclick="showInfo('uk')"></div>
+
+    <!-- Info Box -->
+    <div class="info-box" id="infoBox">
+      <h3 id="countryName">Country</h3>
+      <p id="countryInfo">Click on a hotspot to view tourist info.</p>
+    </div>
+  </div>
+
+  <script>
+    const infoData = {
+      india: {
+        name: "India",
+        info: "Explore the Taj Mahal, Jaipur forts, Kerala backwaters, and the Himalayas."
+      },
+      france: {
+        name: "France",
+        info: "Visit the Eiffel Tower, Louvre Museum, wine regions, and the Riviera."
+      },
+      usa: {
+        name: "United States",
+        info: "See New York City, Grand Canyon, Yellowstone, and Hollywood."
+      },
+      australia: {
+        name: "Australia",
+        info: "Enjoy Sydney Opera House, Great Barrier Reef, and Uluru."
+      },
+      uk: {
+        name: "United Kingdom",
+        info: "Tour London, Stonehenge, Edinburgh Castle, and scenic countryside."
+      }
+    };
+
+    function showInfo(countryKey) {
+      const data = infoData[countryKey];
+      document.getElementById("countryName").textContent = data.name;
+      document.getElementById("countryInfo").textContent = data.info;
+      document.getElementById("infoBox").style.display = "block";
+    }
+  </script>
+</body>
+</html>
