@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Railway Information System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #89ecf5;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #004080;
+        }
+        .banner {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 300px;
+            border-radius: 10px;
+        }
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px #ccc;
+        }
+        th, td {
+            border: 1px solid #004080;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #004080;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #d9e8f5;
+        }
+        .links {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .links a {
+            color: #004080;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://www.shutterstock.com/image-vector/new-train-india-vande-bharat-260nw-2294127767.jpg" 
+         alt="Railway Banner" 
+         class="banner">
+
+    <h1>Railway Info Modul</h1>
+
+    <table>
+        <tr>
+            <th>Train Number</th>
+            <th>Train Name</th>
+	    <th>From</th>
+	    <th>To</th>	
+            <th>Arrival Time</th>
+            <th>Departure Time</th>
+        </tr>
+        <tr>
+            <td>12001</td>
+            <td>Shatabdi Express</td>
+	    <td>Chennai</td>
+            <td>Rajamandri</td>
+            <td>05:50 AM</td>
+            <td>06:00 AM</td>
+        </tr>
+        <tr>
+            <td>12951</td>
+            <td>Rajdhani Express</td>
+	    <td>Chennai Central</td>
+            <td>New Delhi</td>
+            <td>03:50 PM</td>
+            <td>04:00 PM</td>
+        </tr>
+        <tr>
+            <td>12245</td>
+            <td>Duronto Express</td>
+	    <td>Kolkatha</td>
+            <td>Kanyakumari</td>
+            <td>07:50 AM</td>
+            <td>08:00 AM</td>
+        </tr>
+	<tr>
+            <td>10109</td>
+            <td>Chennai New-Delhi express</td>
+	    <td>Chennai</td>
+            <td>New Delhi</td>
+            <td>07:00 AM</td>
+            <td>9:00 AM</td>
+        </tr>
+	<tr>
+            <td>12245</td>
+            <td>Chennai USA Express</td>
+	    <td>Chennai</td>
+            <td>USA</td>
+            <td>00:00 AM</td>
+            <td>08:00 AM</td>
+        </tr>
+	<tr>
+            <td>22222</td>
+            <td>Sai-My Boy Express</td>
+	    <td>Depends on Sai's mood</td>
+            <td>-</td>
+            <td>Potaruu Motam Potaruu...</td>
+            <td>Emo naku telduu broo...</td>
+        </tr>
+	<tr>
+            <td>11111</td>
+            <td>Earth to Hell Express</td>
+	    <td>Earth</td>
+            <td>Hell</td>
+            <td>07:00 AM</td>
+            <td>25:00 AM</td>
+        </tr>
+	<tr>
+            <td>12245</td>
+            <td>Elon Musk Express</td>
+	    <td>Earth</td>
+            <td>Mars</td>
+            <td>10:50 AM</td>
+            <td>18:00 AM</td>
+        </tr>
+	<tr>
+            <td>14722</td>
+            <td>Abohar Jodhpur Express</td>
+	    <td>Abohar Junction</td>
+            <td>Jodhpur Junction</td>
+            <td>10:50 AM</td>
+            <td>18:00 AM</td>
+        </tr>
+	<tr>
+            <td>54703</td>
+            <td>Abohar Jodhpur Passenger</td>
+	    <td>Bathinda Junction</td>
+            <tdJaipur Junction</td>
+            <td>10:50 AM</td>
+            <td>18:00 AM</td>
+        </tr>
+	<tr>
+  <td>54703</td>
+  <td>Abohar Jodhpur Passenger</td>
+  <td>Bathinda Junction</td>
+  <td>Jaipur Junction</td>
+  <td>10:50 AM</td>
+  <td>06:00 PM</td>
+</tr>
+<tr>
+  <td>12951</td>
+  <td>Garib Rath Express</td>
+  <td>Delhi Sarai Rohilla</td>
+  <td>Ajmer Junction</td>
+  <td>08:00 AM</td>
+  <td>12:30 PM</td>
+</tr>
+<tr>
+  <td>12309</td>
+  <td>Shatabdi Express</td>
+  <td>New Delhi</td>
+  <td>Chandigarh</td>
+  <td>07:00 AM</td>
+  <td>10:00 AM</td>
+</tr>
+<tr>
+  <td>11015</td>
+  <td>Paschim Express</td>
+  <td>Mumbai CST</td>
+  <td>Amritsar Junction</td>
+  <td>09:30 AM</td>
+  <td>11:45 PM</td>
+</tr>
+<tr>
+  <td>22461</td>
+  <td>Humsafar Express</td>
+  <td>Ernakulam</td>
+  <td>Delhi Sarai Rohilla</td>
+  <td>04:15 PM</td>
+  <td>08:20 AM</td>
+</tr>
+<tr>
+  <td>15017</td>
+  <td>Amritsar Express</td>
+  <td>Amritsar Junction</td>
+  <td>Delhi Junction</td>
+  <td>05:00 AM</td>
+  <td>11:00 AM</td>
+</tr>
+<tr>
+  <td>12183</td>
+  <td>Ajmer Shatabdi</td>
+  <td>New Delhi</td>
+  <td>Ajmer Junction</td>
+  <td>06:30 AM</td>
+  <td>10:15 AM</td>
+</tr>
+<tr>
+  <td>19215</td>
+  <td>Coimbatore Express</td>
+  <td>Coimbatore</td>
+  <td>Chennai Central</td>
+  <td>07:20 AM</td>
+  <td>01:40 PM</td>
+</tr>
+<tr>
+  <td>12623</td>
+  <td>Howrah Mail</td>
+  <td>Kolkata Howrah</td>
+  <td>Delhi Junction</td>
+  <td>08:45 AM</td>
+  <td>07:00 AM (Next Day)</td>
+</tr>
+<tr>
+  <td>16529</td>
+  <td>Lucknow Express</td>
+  <td>Lucknow NR</td>
+  <td>Delhi Junction</td>
+  <td>06:00 AM</td>
+  <td>11:30 AM</td>
+</tr>
+<tr>
+  <td>12841</td>
+  <td>Jammu Rajdhani</td>
+  <td>Jammu Tawi</td>
+  <td>New Delhi</td>
+  <td>07:15 AM</td>
+  <td>03:00 PM</td>
+</tr>
+<tr>
+  <td>19411</td>
+  <td>Chennai Rajdhani</td>
+  <td>Chennai Central</td>
+  <td>New Delhi</td>
+  <td>06:00 AM</td>
+  <td>06:30 PM</td>
+</tr>
+<tr>
+  <td>18401</td>
+  <td>Rajdhani Express</td>
+  <td>Howrah</td>
+  <td>New Delhi</td>
+  <td>04:15 PM</td>
+  <td>08:00 AM (Next Day)</td>
+</tr>
+<tr>
+  <td>12917</td>
+  <td>Shalimar Express</td>
+  <td>Shalimar</td>
+  <td>New Delhi</td>
+  <td>07:50 AM</td>
+  <td>08:15 PM</td>
+</tr>
+<tr>
+  <td>12439</td>
+  <td>Farakka Express</td>
+  <td>Malda Town</td>
+  <td>Delhi Junction</td>
+  <td>05:00 AM</td>
+  <td>11:20 AM</td>
+</tr>
+<tr>
+  <td>11075</td>
+  <td>Mumbai Rajdhani</td>
+  <td>Mumbai CST</td>
+  <td>New Delhi</td>
+  <td>07:00 PM</td>
+  <td>11:45 AM (Next Day)</td>
+</tr>
+<tr>
+  <td>12717</td>
+  <td>Azad Hind Express</td>
+  <td>Howrah</td>
+  <td>New Delhi</td>
+  <td>06:30 AM</td>
+  <td>07:00 PM</td>
+</tr>
+<tr>
+  <td>12235</td>
+  <td>Jan Shatabdi Express</td>
+  <td>New Delhi</td>
+  <td>Kanpur Central</td>
+  <td>05:45 AM</td>
+  <td>09:15 AM</td>
+</tr>
+<tr>
+  <td>12489</td>
+  <td>Darbhanga Express</td>
+  <td>Darbhanga</td>
+  <td>Delhi Junction</td>
+  <td>06:00 AM</td>
+  <td>12:40 PM</td>
+</tr>
+<tr>
+  <td>12555</td>
+  <td>Gorakhpur Express</td>
+  <td>Gorakhpur</td>
+  <td>Delhi Junction</td>
+  <td>07:00 AM</td>
+  <td>02:00 PM</td>
+</tr>
+<tr>
+  <td>12983</td>
+  <td>Patna Rajdhani</td>
+  <td>Patna Junction</td>
+  <td>New Delhi</td>
+  <td>08:00 AM</td>
+  <td>06:30 PM</td>
+</tr>
+<tr>
+  <td>12337</td>
+  <td>Dehradun Shatabdi</td>
+  <td>New Delhi</td>
+  <td>Dehradun</td>
+  <td>07:30 AM</td>
+  <td>11:45 AM</td>
+</tr>
+<tr>
+  <td>12159</td>
+  <td>Haridwar Express</td>
+  <td>Haridwar</td>
+  <td>Delhi Junction</td>
+  <td>06:15 AM</td>
+  <td>12:20 PM</td>
+</tr>
+<tr>
+  <td>15645</td>
+  <td>Ranchi Express</td>
+  <td>Ranchi</td>
+  <td>Delhi Junction</td>
+  <td>07:10 AM</td>
+  <td>02:35 PM</td>
+</tr>
+<tr>
+  <td>14517</td>
+  <td>Bangalore Express</td>
+  <td>Bangalore City</td>
+  <td>Delhi Junction</td>
+  <td>08:25 AM</td>
+  <td>08:50 PM</td>
+</tr>
+<tr>
+  <td>12977</td>
+  <td>Hatia Rajdhani</td>
+  <td>Hatia</td>
+  <td>New Delhi</td>
+  <td>07:00 AM</td>
+  <td>06:00 PM</td>
+</tr>
+<tr>
+  <td>12421</td>
+  <td>Gorakhpur Express</td>
+  <td>Gorakhpur</td>
+  <td>New Delhi</td>
+  <td>05:50 AM</td>
+  <td>01:10 PM</td>
+</tr>
+<tr>
+  <td>12887</td>
+  <td>Ramnagar Express</td>
+  <td>Ramnagar</td>
+  <td>Delhi Junction</td>
+  <td>06:40 AM</td>
+  <td>01:55 PM</td>
+</tr>
+<tr>
+  <td>13111</td>
+  <td>Ahmedabad Express</td>
+  <td>Ahmedabad</td>
+  <td>Delhi Junction</td>
+  <td>07:30 AM</td>
+  <td>03:00 PM</td>
+</tr>
+<tr>
+  <td>14234</td>
+  <td>Hyderabad Express</td>
+  <td>Hyderabad</td>
+  <td>New Delhi</td>
+  <td>06:45 AM</td>
+  <td>10:30 PM</td>
+</tr>
+<tr>
+  <td>12345</td>
+  <td>Lucknow Mail</td>
+  <td>Lucknow NR</td>
+  <td>Mumbai CST</td>
+  <td>08:00 AM</td>
+  <td>08:00 PM</td>
+</tr>
+<tr>
+  <td>11001</td>
+  <td>Jammu Mail</td>
+  <td>Jammu Tawi</td>
+  <td>Delhi Junction</td>
+  <td>07:20 AM</td>
+  <td>05:00 PM</td>
+</tr>
+<tr>
+  <td>15102</td>
+  <td>Patna Express</td>
+  <td>Patna Junction</td>
+  <td>Howrah</td>
+  <td>06:15 AM</td>
+  <td>11:45 AM</td>
+</tr>
+<tr>
+  <td>12580</td>
+  <td>Kanpur Express</td>
+  <td>Kanpur Central</td>
+  <td>Delhi Junction</td>
+  <td>05:50 AM</td>
+  <td>12:30 PM</td>
+</tr>
+<tr>
+  <td>15601</td>
+  <td>Bangalore Express</td>
+  <td>Bangalore City</td>
+  <td>Chennai Central</td>
+  <td>07:30 AM</td>
+  <td>02:00 PM</td>
+</tr>
+<tr>
+  <td>19855</td>
+  <td>Chennai Mail</td>
+  <td>Chennai Central</td>
+  <td>Hyderabad</td>
+  <td>06:00 AM</td>
+  <td>02:30 PM</td>
+</tr>
+<tr>
+  <td>14589</td>
+  <td>Delhi Express</td>
+  <td>New Delhi</td>
+  <td>Patna Junction</td>
+  <td>07:45 AM</td>
+  <td>03:15 PM</td>
+</tr>
+<tr>
+  <td>17234</td>
+  <td>Amritsar Express</td>
+  <td>Amritsar Junction</td>
+  <td>Jalandhar City</td>
+  <td>05:20 AM</td>
+  <td>08:30 AM</td>
+</tr>
+<tr>
+  <td>18456</td>
+  <td>Rajdhani Express</td>
+  <td>New Delhi</td>
+  <td>Howrah</td>
+  <td>07:00 PM</td>
+  <td>08:15 AM (Next Day)</td>
+</tr>
+<tr>
+  <td>12967</td>
+  <td>Hatia Express</td>
+  <td>Hatia</td>
+  <td>Patna Junction</td>
+  <td>06:10 AM</td>
+  <td>11:40 AM</td>
+</tr>
+<tr>
+  <td>13011</td>
+  <td>Ahmedabad Express</td>
+  <td>Ahmedabad</td>
+  <td>Mumbai CST</td>
+  <td>07:00 AM</td>
+  <td>02:00 PM</td>
+</tr>
+<tr>
+  <td>12245</td>
+  <td>Shatabdi Express</td>
+  <td>New Delhi</td>
+  <td>Chandigarh</td>
+  <td>06:30 AM</td>
+  <td>10:00 AM</td>
+</tr>
+<tr>
+  <td>12450</td>
+  <td>Farakka Express</td>
+  <td>Malda Town</td>
+  <td>Delhi Junction</td>
+  <td>05:40 AM</td>
+  <td>11:10 AM</td>
+</tr>
+<tr>
+  <td>16515</td>
+  <td>Lucknow Express</td>
+  <td>Lucknow NR</td>
+  <td>Delhi Junction</td>
+  <td>06:05 AM</td>
+  <td>11:20 AM</td>
+</tr>
+<tr>
+  <td>19420</td>
+  <td>Chennai Rajdhani</td>
+  <td>Chennai Central</td>
+  <td>New Delhi</td>
+  <td>05:55 AM</td>
+  <td>06:25 PM</td>
+</tr>
+<tr>
+  <td>11016</td>
+  <td>Paschim Express</td>
+  <td>Mumbai CST</td>
+  <td>Amritsar Junction</td>
+  <td>09:40 AM</td>
+  <td>11:50 PM</td>
+</tr>
+<tr>
+  <td>22462</td>
+  <td>Humsafar Express</td>
+  <td>Ernakulam</td>
+  <td>Delhi Sarai Rohilla</td>
+  <td>04:20 PM</td>
+  <td>08:25 AM</td>
+</tr>
+<tr>
+  <td>15018</td>
+  <td>Amritsar Express</td>
+  <td>Amritsar Junction</td>
+  <td>Delhi Junction</td>
+  <td>05:05 AM</td>
+  <td>11:05 AM</td>
+</tr>
+<tr>
+  <td>12184</td>
+  <td>Ajmer Shatabdi</td>
+  <td>New Delhi</td>
+  <td>Ajmer Junction</td>
+  <td>06:40 AM</td>
+  <td>10:20 AM</td>
+</tr>
+<tr>
+  <td>19216</td>
+  <td>Coimbatore Express</td>
+  <td>Coimbatore</td>
+  <td>Chennai Central</td>
+  <td>07:30 AM</td>
+  <td>01:50 PM</td>
+</tr>
+<tr>
+  <td>12624</td>
+  <td>Howrah Mail</td>
+  <td>Kolkata Howrah</td>
+  <td>Delhi Junction</td>
+  <td>08:50 AM</td>
+  <td>07:10 AM (Next Day)</td>
+</tr>
+<tr>
+  <td>12980</td>
+  <td>Patna Rajdhani</td>
+  <td>Patna Junction</td>
+  <td>New Delhi</td>
+  <td>08:10 AM</td>
+  <td>06:35 PM</td>
+</tr>
+<tr>
+  <td>12338</td>
+  <td>Dehradun Shatabdi</td>
+  <td>New Delhi</td>
+  <td>Dehradun</td>
+  <td>07:40 AM</td>
+  <td>11:55 AM</td>
+</tr>
+<tr>
+  <td>12160</td>
+  <td>Haridwar Express</td>
+  <td>Haridwar</td>
+  <td>Delhi Junction</td>
+  <td>06:25 AM</td>
+  <td>12:30 PM</td>
+</tr>
+<tr>
+  <td>15646</td>
+  <td>Ranchi Express</td>
+  <td>Ranchi</td>
+  <td>Delhi Junction</td>
+  <td>07:20 AM</td>
+  <td>02:40 PM</td>
+</tr>
+<tr>
+  <td>14518</td>
+  <td>Bangalore Express</td>
+  <td>Bangalore City</td>
+  <td>Delhi Junction</td>
+  <td>08:35 AM</td>
+  <td>08:55 PM</td>
+</tr>
+<tr>
+  <td>12978</td>
+  <td>Hatia Rajdhani</td>
+  <td>Hatia</td>
+  <td>New Delhi</td>
+  <td>07:05 AM</td>
+  <td>06:05 PM</td>
+</tr>
+<tr>
+  <td>12422</td>
+  <td>Gorakhpur Express</td>
+  <td>Gorakhpur</td>
+  <td>New Delhi</td>
+  <td>06:00 AM</td>
+  <td>01:15 PM</td>
+</tr>
+<tr>
+  <td>12888</td>
+  <td>Ramnagar Express</td>
+  <td>Ramnagar</td>
+  <td>Delhi Junction</td>
+  <td>06:50 AM</td>
+  <td>02:00 PM</td>
+</tr>
+<tr>
+  <td>13112</td>
+  <td>Ahmedabad Express</td>
+  <td>Ahmedabad</td>
+  <td>Delhi Junction</td>
+  <td>07:40 AM</td>
+  <td>03:10 PM</td>
+</tr>
+<tr>
+  <td>14999</td>
+  <td>Rajkot Express</td>
+  <td>Rajkot</td>
+  <td>Mumbai CST</td>
+  <td>08:00 AM</td>
+  <td>06:30 PM</td>
+</tr>
+<tr>
+  <td>17777</td>
+  <td>Patiala Express</td>
+  <td>Patiala</td>
+  <td>Delhi Junction</td>
+  <td>06:20 AM</td>
+  <td>12:40 PM</td>
+</tr>
+<tr>
+  <td>13333</td>
+  <td>Jalandhar Mail</td>
+  <td>Jalandhar City</td>
+  <td>Delhi Junction</td>
+  <td>07:00 AM</td>
+  <td>01:00 PM</td>
+</tr>
+<tr>
+  <td>15555</td>
+  <td>Kanpur Mail</td>
+  <td>Kanpur Central</td>
+  <td>New Delhi</td>
+  <td>05:45 AM</td>
+  <td>11:15 AM</td>
+</tr>
+<tr>
+  <td>14001</td>
+  <td>Jodhpur Express</td>
+  <td>Jodhpur</td>
+  <td>Delhi Junction</td>
+  <td>06:30 AM</td>
+  <td>02:10 PM</td>
+</tr>
+<tr>
+  <td>12020</td>
+  <td>Amritsar Express</td>
+  <td>Amritsar Junction</td>
+  <td>New Delhi</td>
+  <td>05:15 AM</td>
+  <td>12:00 PM</td>
+</tr>
+
+
+    </table>
+	<h1>Food Menu</h1>
+	<table>
+        <tr>
+  <th>Item name</th>
+  <th>Qty</th>
+  <th>Price(INR)</th>
+</tr>
+<tr>
+  <td>Paneer Butter Masala</td>
+  <td>1 Plate</td>
+  <td>180</td>
+</tr>
+<tr>
+  <td>Butter Naan</td>
+  <td>2 Pieces</td>
+  <td>50</td>
+</tr>
+<tr>
+  <td>Dal Makhani</td>
+  <td>1 Bowl</td>
+  <td>150</td>
+</tr>
+<tr>
+  <td>Jeera Rice</td>
+  <td>1 Plate</td>
+  <td>120</td>
+</tr>
+<tr>
+  <td>Chicken Biryani</td>
+  <td>1 Plate</td>
+  <td>250</td>
+</tr>
+<tr>
+  <td>Veg Pulao</td>
+  <td>1 Plate</td>
+  <td>150</td>
+</tr>
+<tr>
+  <td>Masala Dosa</td>
+  <td>1 Piece</td>
+  <td>90</td>
+</tr>
+<tr>
+  <td>Idli Sambar</td>
+  <td>2 Pieces</td>
+  <td>70</td>
+</tr>
+<tr>
+  <td>Chicken Tikka</td>
+  <td>6 Pieces</td>
+  <td>300</td>
+</tr>
+<tr>
+  <td>Fish Curry</td>
+  <td>1 Bowl</td>
+  <td>220</td>
+</tr>
+<tr>
+  <td>Rogan Josh</td>
+  <td>1 Bowl</td>
+  <td>280</td>
+</tr>
+<tr>
+  <td>Gulab Jamun</td>
+  <td>2 Pieces</td>
+  <td>80</td>
+</tr>
+<tr>
+  <td>Paneer Tikka</td>
+  <td>6 Pieces</td>
+  <td>250</td>
+</tr>
+<tr>
+  <td>Chole Bhature</td>
+  <td>1 Plate</td>
+  <td>140</td>
+</tr>
+<tr>
+  <td>Veg Manchurian</td>
+  <td>1 Bowl</td>
+  <td>160</td>
+</tr>
+<tr>
+  <td>Fried Rice</td>
+  <td>1 Plate</td>
+  <td>130</td>
+</tr>
+<tr>
+  <td>Egg Curry</td>
+  <td>1 Bowl</td>
+  <td>150</td>
+</tr>
+<tr>
+  <td>Tandoori Chicken</td>
+  <td>1 Quarter</td>
+  <td>350</td>
+</tr>
+<tr>
+  <td>Veg Spring Roll</td>
+  <td>2 Pieces</td>
+  <td>90</td>
+</tr>
+<tr>
+  <td>Butter Chicken</td>
+  <td>1 Bowl</td>
+  <td>300</td>
+</tr>
+<tr>
+  <td>Palak Paneer</td>
+  <td>1 Bowl</td>
+  <td>190</td>
+</tr>
+<tr>
+  <td>Rasam</td>
+  <td>1 Bowl</td>
+  <td>80</td>
+</tr>
+<tr>
+  <td>Biryani Rice</td>
+  <td>1 Plate</td>
+  <td>200</td>
+</tr>
+<tr>
+  <td>Chicken Korma</td>
+  <td>1 Bowl</td>
+  <td>270</td>
+</tr>
+<tr>
+  <td>Veg Hakka Noodles</td>
+  <td>1 Plate</td>
+  <td>140</td>
+</tr>
+<tr>
+  <td>Dal Tadka</td>
+  <td>1 Bowl</td>
+  <td>130</td>
+</tr>
+<tr>
+  <td>Masala Chai</td>
+  <td>1 Cup</td>
+  <td>40</td>
+</tr>
+<tr>
+  <td>Paneer Pakora</td>
+  <td>6 Pieces</td>
+  <td>180</td>
+</tr>
+<tr>
+  <td>Samosa</td>
+  <td>2 Pieces</td>
+  <td>50</td>
+</tr>
+<tr>
+  <td>Veg Cutlet</td>
+  <td>2 Pieces</td>
+  <td>70</td>
+</tr>
+<tr>
+  <td>Chocolate Brownie</td>
+  <td>1 Piece</td>
+  <td>90</td>
+</tr>
+
+    </table>
+	<div class="links">
+        <p>Cattering service Links:</p>
+       <a href="https://www.ecatering.irctc.co.in/">Click to Visit FoodOnTracks</a>
+        
+    </div>
+
+    <div class="links">
+        <p>Useful Links:</p>
+        <a href="https://www.indianrail.gov.in" target="_blank">Indian Railways Official Site</a>
+        <a href="https://www.irctc.co.in" target="_blank">IRCTC Ticket Booking</a>
+    </div>
+
+</body>
+</html>
