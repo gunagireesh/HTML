@@ -158,7 +158,7 @@
   <div class="state-name">Andhra Pradesh</div>
 </div>
 
-<div class="state-card" data-state="Arunachal Pradesh">
+<div class="state-card" data-state="ArunachalPradesh">
   <div class="state-image">
     <img src="https://img.freepik.com/premium-vector/sky-blue-color-arunachal-pradesh-map-political-administrative-map-arunachal-pradesh-with-districts_622214-741.jpg" alt="Arunachal Pradesh" />
   </div>
@@ -207,7 +207,7 @@
   <div class="state-name">Haryana</div>
 </div>
 
-<div class="state-card" data-state="Himachal Pradesh">
+<div class="state-card" data-state="HimachalPradesh">
   <div class="state-image">
     <img src="https://img.freepik.com/premium-vector/sky-blue-color-himachal-pradesh-map-political-administrative-map-himachal-pradesh_622214-750.jpg" alt="Himachal Pradesh" />
   </div>
@@ -235,7 +235,7 @@
   <div class="state-name">Kerala</div>
 </div>
 
-<div class="state-card" data-state="Madhya Pradesh">
+<div class="state-card" data-state="MadhyaPradesh">
   <div class="state-image">
     <img src="https://img.freepik.com/premium-vector/sky-blue-color-madhya-pradesh-map-political-administrative-map-madhya-pradesh-with-districts_622214-754.jpg" alt="Madhya Pradesh" />
   </div>
@@ -305,7 +305,7 @@
   <div class="state-name">Sikkim</div>
 </div>
 
-<div class="state-card" data-state="Tamil Nadu">
+<div class="state-card" data-state="Tamilnadu">
   <div class="state-image">
     <img src="https://img.freepik.com/premium-vector/sky-blue-color-tamil-nadu-map-political-administrative-map-tamil-nadu-with-districts_622214-764.jpg" alt="Tamil Nadu" />
   </div>
@@ -326,7 +326,7 @@
   <div class="state-name">Tripura</div>
 </div>
 
-<div class="state-card" data-state="Uttar Pradesh">
+<div class="state-card" data-state="Uttarpradesh">
   <div class="state-image">
     <img src="https://img.freepik.com/premium-vector/sky-blue-color-uttar-pradesh-map-political-administrative-map-uttar-pradesh-with-districts_622214-767.jpg" alt="Uttar Pradesh" />
   </div>
@@ -340,7 +340,7 @@
   <div class="state-name">Uttarakhand</div>
 </div>
 
-<div class="state-card" data-state="West Bengal">
+<div class="state-card" data-state="Westbengal">
   <div class="state-image">
     <img src="https://img.freepik.com/premium-vector/sky-blue-color-west-bengal-map-political-administrative-map-west-bengal-with-districts_622214-769.jpg" alt="West Bengal" />
   </div>
@@ -365,143 +365,1249 @@
   const attractions = {
     AndhraPradesh: [
       {
-        name: "Amaravati Stupa",
-        image: "https://upload.wikimedia.org/wikipedia/commons/e/eb/Amaravati_Stupa_Remains_01.jpg",
-        description: "Ancient Buddhist monument in Amaravati showcasing exquisite sculptures.",
-        transport: "Vijayawada Airport (35 km), Amaravati Bus Stand nearby, taxis and autos available.",
-        importance: "Historical center of Buddhist learning and pilgrimage from the Satavahana period."
-      },
-    {
-      name: "Araku Valley",
-      image: "https://upload.wikimedia.org/wikipedia/commons/7/75/Araku_Valley_View.jpg",
-      description: "Picturesque hill station known for coffee plantations and tribal culture.",
-      transport: "Visakhapatnam Airport (110 km), Araku Railway Station, buses and cabs from Vizag.",
-      importance: "Popular eco-tourism and trekking destination, rich in biodiversity and tribal heritage."
-    }
-  ],
-  ArunachalPradesh: [
-    {
-      name: "Tawang Monastery",
-      image: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Tawang_Monastery_2009.jpg",
-      description: "One of the largest Buddhist monasteries in India, located in Tawang.",
-      transport: "Tezpur Airport + road, or rail to Guwahati then bus/road to Tawang.",
-      importance: "Spiritual heart of the Monpa culture and key center for Tibetan Buddhism."  
-    },
-    {
-      name: "Sela Pass",
-      image: "https://upload.wikimedia.org/wikipedia/commons/6/67/Sela_Pass_in_Winter.jpg",
-      description: "High-altitude pass offering breathtaking Himalayan scenery near Tawang.",
-      transport: "Accessible by road from Tawang; small detours along the route.",
-      importance: "Stunning natural beauty and revered by locals (Sela Lake nearby)."  
-    }
-  ],
-  Assam: [
-    {
-      name: "Kaziranga National Park",
-      image: "https://upload.wikimedia.org/wikipedia/commons/4/43/One-horned_Rhinoceros_in_Kaziranga.jpg",
-      description: "World-famous park in Assam home to the one-horned rhinoceros.",
-      transport: "Jorhat/Tezpur Airport, Guwahati Railway Station + road transport.",
-      importance: "UNESCO World Heritage site protecting rhinos, tigers & elephants."  
-    },
-    {
-      name: "Kamakhya Temple",
-      image: "https://upload.wikimedia.org/wikipedia/commons/7/70/Kamakhya_Temple_Guwahati.jpg",
-      description: "Ancient tantric temple on Nilachal Hill in Guwahati.",
-      transport: "Guwahati Airport/Railway + city buses or taxis.",
-      importance: "Major Shakti pilgrimage site and center of tantric worship."  
-    }
-  ],
-  Bihar: [
-    {
-      name: "Mahabodhi Temple",
-      image: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Mahabodhi_Temple_Bodh_Gaya.jpg",
-      description: "UNESCO World Heritage site in Bodh Gaya where Buddha attained enlightenment.",
-      transport: "Gaya Airport/Railway, bus/taxi connections.",
-      importance: "One of Buddhism’s most sacred sites globally."  
-    },
-    {
-      name: "Nalanda University Ruins",
-      image: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Nalanda_ruins_panorama.jpg",
-      description: "Remains of ancient seat of learning, once the world’s oldest residential university.",
-      transport: "Patna Airport + road/rail to Nalanda.",
-      importance: "Iconic symbol of India's academic heritage and early global learning."  
-    }
-  ],
-  Chhattisgarh: [
-    {
-      name: "Chitrakote Falls",
-      image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Chitrakot_Falls_Bastar.jpg",
-      description: "Spectacular waterfall on the Indravati River, often called the ‘Niagara of India’.",
-      transport: "Raipur Airport/Railway + road to Jagdalpur and onward transport.",
-      importance: "Iconic natural wonder and one of India’s widest waterfalls."  
-    },
-    {
-      name: "Barnawapara Wildlife Sanctuary",
-      image: "https://upload.wikimedia.org/wikipedia/commons/9/99/Wildlife_sanctuary_Barnawapara.jpg",
-      description: "Dense wildlife reserve with forests, riverine habitats, and diverse fauna.",
-      transport: "Raipur Airport + road transport to sanctuary.",
-      importance: "Habitat for tigers, leopards and rare birds."  
-    }
-  ],
+    name: "Tirumala (Tirupati Temple)",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Tirumala_Temple.jpg",
+    description: "World-famous temple dedicated to Lord Venkateswara, located on the Tirumala hills.",
+    transport: "Tirupati Airport (15 km), Tirupati Railway Station, frequent buses and cabs to Tirumala.",
+    importance: "One of the richest and most visited Hindu temples globally, known for spiritual significance and grandeur."
+  },
+  {
+    name: "Araku Valley",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/75/Araku_Valley_View.jpg",
+    description: "Picturesque hill station known for coffee plantations and tribal culture.",
+    transport: "Visakhapatnam Airport (110 km), Araku Railway Station, buses and cabs from Vizag.",
+    importance: "Popular eco-tourism and trekking destination, rich in biodiversity and tribal heritage."
+  },
+  {
+    name: "Borra Caves",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e1/Borra_Caves.jpg",
+    description: "Spectacular limestone caves featuring stalactites and stalagmites formations.",
+    transport: "Located 30 km from Araku; accessible via road/train from Visakhapatnam.",
+    importance: "Geological marvel over a million years old, associated with religious beliefs and legends."
+  },
+  {
+    name: "Visakhapatnam (RK Beach)",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/40/RK_Beach_Visakhapatnam.jpg",
+    description: "Popular coastal beach area along the Bay of Bengal in Vizag.",
+    transport: "Visakhapatnam Airport (12 km), Vizag Railway Station, local autos and buses available.",
+    importance: "Known for its scenic coastline, vibrant promenade, museums, and seafood."
+  },
+  {
+    name: "Amaravati Stupa",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/eb/Amaravati_Stupa_Remains_01.jpg",
+    description: "Ancient Buddhist stupa with intricate carvings from the Satavahana period.",
+    transport: "Vijayawada Airport (35 km), Amaravati Bus Stand nearby, taxis and autos available.",
+    importance: "Important center of Buddhist art and pilgrimage; one of the oldest stupas in India."
+  },
+  {
+    name: "Lepakshi Temple",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Lepakshi_Temple.jpg",
+    description: "Historic 16th-century temple famous for hanging pillar and Vijayanagara art.",
+    transport: "Bengaluru Airport (120 km), Hindupur Railway Station, taxis available.",
+    importance: "Architectural wonder known for murals, Nandi statue, and intricate sculptures."
+  }
+    ],
+    ArunachalPradesh: [
+      {
+    name: "Tawang Monastery",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Tawang_Monastery_2009.jpg",
+    description: "One of the largest Buddhist monasteries in India, located at an altitude of 10,000 ft.",
+    transport: "Nearest airport at Tezpur (Assam), then road to Tawang via Bomdila. Guwahati to Tawang takes approx. 14-16 hrs by car.",
+    importance: "Spiritual and cultural heart of Monpa people and Tibetan Buddhism in India."
+  },
+  {
+    name: "Sela Pass",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/67/Sela_Pass_in_Winter.jpg",
+    description: "Snow-covered mountain pass that connects Tawang with the rest of Arunachal Pradesh.",
+    transport: "Reach via road from Bomdila or Tawang while crossing from Tezpur or Guwahati.",
+    importance: "Stunning natural beauty with a sacred lake and panoramic views of the Eastern Himalayas."
+  },
+  {
+    name: "Ziro Valley",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/34/Ziro_Valley.JPG",
+    description: "Lush green valley known for rice fields, pine forests, and Apatani tribal culture.",
+    transport: "Nearest airport at Lilabari (Assam), then drive via Naharlagun to Ziro (around 4-5 hours).",
+    importance: "UNESCO World Heritage tentative site and venue of the famous Ziro Music Festival."
+  },
+  {
+    name: "Namdapha National Park",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Namdapha_National_Park.JPG",
+    description: "Easternmost tiger reserve of India, known for dense tropical forests and wildlife.",
+    transport: "Nearest airport and railway: Dibrugarh (Assam), then 160 km road journey to Miao.",
+    importance: "Only national park in India where four big cats (tiger, leopard, snow leopard, clouded leopard) coexist."
+  },
+  {
+    name: "Bomdila Monastery",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/29/Bomdila_Monastery.jpg",
+    description: "Serene Buddhist monastery offering panoramic views of snow-capped mountains.",
+    transport: "Accessible by road from Tezpur or Guwahati en route to Tawang.",
+    importance: "Cultural and spiritual center for the local Buddhist community; Tibetan architecture."
+  },
+  {
+    name: "Sangti Valley",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/db/Sangti_Valley.jpg",
+    description: "A hidden gem in West Kameng, known for its pristine beauty and migratory black-necked cranes.",
+    transport: "About 15 km from Dirang, connected by road. Nearest airport is Tezpur (Assam).",
+    importance: "Ideal for peaceful nature retreats, bird watching, and riverside camping."
+  }
+    ],
+    Assam: [
+      {
+        name: "Kaziranga National Park",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/43/One-horned_Rhinoceros_in_Kaziranga.jpg",
+    description: "UNESCO World Heritage site famous for the one-horned rhinoceros and diverse wildlife.",
+    transport: "Nearest airports: Jorhat (96 km), Guwahati (217 km); road and bus services available.",
+    importance: "Home to the largest population of Indian rhinoceroses and a biodiversity hotspot."
+  },
+  {
+    name: "Kamakhya Temple",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/70/Kamakhya_Temple_Guwahati.jpg",
+    description: "Ancient Hindu temple dedicated to Goddess Kamakhya, situated on Nilachal Hill in Guwahati.",
+    transport: "5 km from Guwahati Railway Station, 20 km from Guwahati Airport; autos, taxis available.",
+    importance: "One of the oldest Shakti Peethas, and a major center of tantric worship in India."
+  },
+  {
+    name: "Majuli Island",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Majuli_Island.JPG",
+    description: "World’s largest river island, known for its unique culture, monasteries, and festivals.",
+    transport: "Ferry access from Jorhat (Neemati Ghat); nearest airport: Jorhat (14 km from ghat).",
+    importance: "Cultural capital of Assamese neo-Vaishnavism and a serene natural retreat."
+  },
+  {
+    name: "Sivasagar",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Rang_Ghar_Sivasagar.JPG",
+    description: "Historic city with monuments from the Ahom dynasty such as Rang Ghar and Talatal Ghar.",
+    transport: "Nearest airport: Jorhat (75 km), Sivasagar railway station connected by major trains.",
+    importance: "Showcases the grandeur and engineering of the 600-year Ahom reign in Assam."
+  },
+  {
+    name: "Manas National Park",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/21/Manas_National_Park.jpg",
+    description: "UNESCO-listed national park and biosphere reserve on the Himalayan foothills.",
+    transport: "140 km from Guwahati; nearest railhead: Barpeta Road (20 km).",
+    importance: "Known for tigers, elephants, golden langurs and scenic landscapes."
+  },
+  {
+    name: "Haflong",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f6/Haflong_Lake.jpg",
+    description: "Assam’s only hill station, known for its natural beauty, tribal culture, and lakes.",
+    transport: "Nearest airport: Silchar (100 km); Haflong railway station on Lumding-Silchar route.",
+    importance: "Famous for Haflong Lake, peaceful hills, and traditional Dimasa tribal lifestyle."
+  }
+    ],
+    Bihar: [
+      {
+        name: "Mahabodhi Temple",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Mahabodhi_Temple_Bodh_Gaya.jpg",
+    description: "UNESCO World Heritage Site where Lord Buddha attained enlightenment under the Bodhi tree.",
+    transport: "Gaya Airport (12 km), Gaya Railway Station (16 km), buses and taxis available.",
+    importance: "One of the most sacred sites in Buddhism, attracting pilgrims from all over the world."
+  },
+  {
+    name: "Nalanda University Ruins",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Nalanda_ruins_panorama.jpg",
+    description: "Ancient center of learning dating back to the 5th century CE, now a UNESCO site.",
+    transport: "Patna Airport (90 km), Rajgir Railway Station (12 km), taxis and buses available.",
+    importance: "Symbol of India's glorious academic heritage and global intellectual exchange."
+  },
+  {
+    name: "Vishnupad Temple",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Vishnupad_Temple_Gaya.jpg",
+    description: "Ancient Hindu temple in Gaya believed to have Lord Vishnu’s footprint in stone.",
+    transport: "Located in Gaya city, accessible by road, rail, and air.",
+    importance: "Important pilgrimage site for Hindu pind daan rituals for ancestors."
+  },
+  {
+    name: "Rajgir",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e6/Rajgir_Ropeway.jpg",
+    description: "Historical city associated with Buddha and Mahavira, surrounded by hills and hot springs.",
+    transport: "Rajgir Railway Station (1 km), Patna Airport (100 km), road access via bus/taxi.",
+    importance: "Hosts Vishwa Shanti Stupa, Venuvana, ropeway, and ancient Buddhist/Jain sites."
+  },
+  {
+    name: "Kesariya Stupa",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/12/Kesariya.JPG",
+    description: "One of the largest Buddhist stupas in the world located in East Champaran.",
+    transport: "Nearest railhead: Motihari (35 km), road transport available from Patna (120 km).",
+    importance: "Built during the Mauryan period, linked to Buddha’s last journey."
+  },
+  {
+    name: "Barabar Caves",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/1e/Barabar_Caves.jpg",
+    description: "Oldest surviving rock-cut caves in India, dating back to the Mauryan Empire.",
+    transport: "Nearest railway station: Jehanabad (24 km), Patna Airport (50 km), road transport available.",
+    importance: "Carved during Emperor Ashoka’s reign, linked to Ajivika sect, with polished granite interiors."
+  }
 
-  Rajasthan: [
+    ],
+    Chhattisgarh: [
       {
-        name: "Amber Fort",
-        image: "https://s3.india.com/travel/wp-content/uploads/2014/09/amber-fort.jpg",
-        description: "A beautiful fort with artistic architecture near Jaipur.",
-        transport: "Jaipur Airport (13 km), Jaipur Railway Station (11 km), taxis and buses available.",
-        importance: "UNESCO site representing Rajputana glory with mirror work, gardens, and courtyards.",
-        history: "Built in the 16th century by Raja Man Singh I, the fort showcases a blend of Hindu and Mughal architecture.",
-        bestTimeToVisit: "October to March",
-        entryFee: "₹100 (Indians), ₹550 (Foreigners)",
-        timings: "8:00 AM to 5:30 PM",
-        nearbyAttractions: ["Jaigarh Fort", "Jal Mahal", "Nahargarh Fort"],
-        tips: "Wear comfortable shoes as you’ll be walking a lot. Early morning visits are best to avoid crowds."
+        name: "Chitrakote Falls",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Chitrakot_Falls_Bastar.jpg",
+    description: "The widest waterfall in India, often called the 'Niagara Falls of India', located on the Indravati River.",
+    transport: "Nearest airport: Jagdalpur (40 km), Raipur Airport (285 km); connected via road and bus.",
+    importance: "Major natural attraction with scenic beauty, especially during monsoons."
+  },
+  {
+    name: "Barnawapara Wildlife Sanctuary",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/99/Wildlife_sanctuary_Barnawapara.jpg",
+    description: "Popular wildlife sanctuary known for rich flora and fauna including leopards, wild boars, and deer.",
+    transport: "Nearest city: Mahasamund (45 km), Raipur Airport (100 km); accessible by road.",
+    importance: "Great destination for nature lovers and wildlife photographers."
+  },
+  {
+    name: "Bhoramdeo Temple",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/c8/Bhoramdeo_Temple.jpg",
+    description: "11th-century temple dedicated to Lord Shiva, often called the 'Khajuraho of Chhattisgarh' for its erotic carvings.",
+    transport: "Nearest railway station: Kawardha (18 km), Raipur Airport (134 km).",
+    importance: "Showcases stunning Nagara-style temple architecture and historical significance."
+  },
+  {
+    name: "Kanger Valley National Park",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/85/Kanger_Valley.jpg",
+    description: "Dense forest region with unique limestone caves, waterfalls, and biodiversity.",
+    transport: "Near Jagdalpur (27 km), well connected by road. Nearest airport: Jagdalpur.",
+    importance: "Home to rare species like the Bastar Hill Myna and features beautiful stalactite formations in Kutumsar Caves."
+  },
+  {
+    name: "Tirathgarh Waterfalls",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Tirathgarh_Waterfalls_Chhattisgarh.jpg",
+    description: "Magnificent tiered waterfall located inside the Kanger Valley National Park.",
+    transport: "Near Jagdalpur (35 km); accessible by road from Raipur and Jagdalpur.",
+    importance: "Perfect picnic and photography spot within forest surroundings."
+  },
+  {
+    name: "Danteshwari Temple",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/29/Danteshwari_Temple_Bastar.jpg",
+    description: "Ancient temple dedicated to Goddess Danteshwari, one of the 52 Shakti Peethas.",
+    transport: "Located in Dantewada; nearest airport: Jagdalpur (85 km); road access from Raipur.",
+    importance: "Spiritual center and cultural symbol of tribal Bastar, especially vibrant during Dussehra festival."
+  }
+],
+    Goa:[
+  {
+    name: "Baga Beach",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Baga_Beach_Goa.jpg",
+    description: "One of Goa’s most popular beaches, known for nightlife, water sports, and beach shacks.",
+    transport: "Nearest airport: Dabolim (40 km), Thivim Railway Station (20 km); taxis and local buses available.",
+    importance: "Famous for vibrant tourism scene with parasailing, parties, and sea-view dining."
+  },
+  {
+    name: "Basilica of Bom Jesus",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f6/Basilica_of_Bom_Jesus_Goa.jpg",
+    description: "UNESCO World Heritage Church in Old Goa, holding the mortal remains of St. Francis Xavier.",
+    transport: "Located in Old Goa (10 km from Panaji); accessible by road from airport or railway.",
+    importance: "One of the most revered Christian pilgrimage sites in India and a masterpiece of baroque architecture."
+  },
+  {
+    name: "Aguada Fort",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/32/Fort_Aguada_Goa.jpg",
+    description: "17th-century Portuguese fort with panoramic views of the Arabian Sea and a lighthouse.",
+    transport: "Located near SinQ Beach; 15 km from Panaji, reachable by road.",
+    importance: "Historical landmark offering insights into Goa’s colonial past and defense systems."
+  },
+  {
+    name: "Dudhsagar Falls",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Dudhsagar_waterfalls.jpg",
+    description: "Four-tiered waterfall located on the Goa-Karnataka border, inside Bhagwan Mahavir Wildlife Sanctuary.",
+    transport: "Accessible via jeep from Collem (6 km); nearest railhead: Kulem (8 km).",
+    importance: "One of India’s tallest waterfalls, popular for treks, jeep safaris, and monsoon views."
+  },
+  {
+    name: "Palolem Beach",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4d/Palolem_beach_Goa.jpg",
+    description: "Serene beach in South Goa with palm-fringed shorelines and silent discos.",
+    transport: "Canacona Railway Station (3 km), Dabolim Airport (~67 km), accessible by road.",
+    importance: "Ideal for peaceful vacations, kayaking, dolphin spotting, and yoga retreats."
+  },
+  {
+    name: "Chapora Fort",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Chapora_Fort_View_Goa.jpg",
+    description: "Hilltop fort overlooking Vagator Beach, known for scenic views and Bollywood fame.",
+    transport: "Near Vagator Beach (21 km from Panaji); road access from Calangute and Anjuna.",
+    importance: "Popular sunset viewpoint and filming location of 'Dil Chahta Hai'."
+  }
+],
+  Gujarat:[
+  {
+    name: "Statue of Unity",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Statue_of_Unity_2018.jpg",
+    description: "World’s tallest statue (182 m) dedicated to Sardar Vallabhbhai Patel, located near the Sardar Sarovar Dam.",
+    transport: "Nearest airport: Vadodara (90 km), Ekta Nagar Railway Station nearby; well-connected by road.",
+    importance: "Symbol of national unity and pride; includes museum, valley of flowers, and viewing gallery."
+  },
+  {
+    name: "Somnath Temple",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Somanath_mandir.jpg",
+    description: "One of the 12 Jyotirlingas of Lord Shiva, located on the Arabian Sea coast in Prabhas Patan.",
+    transport: "Nearest railway station: Veraval (7 km), Diu Airport (85 km); taxis and buses available.",
+    importance: "Ancient pilgrimage site repeatedly rebuilt over centuries; symbol of resilience and faith."
+  },
+  {
+    name: "Gir National Park",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Asiatic_Lion_Gir.jpg",
+    description: "Only natural habitat of the Asiatic lion, home to diverse wildlife and forest landscape.",
+    transport: "Nearest railway station: Junagadh (55 km), Rajkot Airport (160 km); accessible by road.",
+    importance: "India’s top wildlife destination and a global conservation success story."
+  },
+  {
+    name: "Rani ki Vav",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Rani_ki_Vav_Patan_Gujarat.jpg",
+    description: "UNESCO-listed stepwell in Patan with intricate carvings and architectural brilliance.",
+    transport: "Nearest city: Mehsana (50 km), Ahmedabad Airport (125 km); accessible by road/train.",
+    importance: "Marvel of subterranean architecture and cultural expression of 11th-century India."
+  },
+  {
+    name: "Dwarkadhish Temple",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Dwarka_temple.jpg",
+    description: "Ancient Hindu temple dedicated to Lord Krishna, situated in the holy city of Dwarka.",
+    transport: "Dwarka Railway Station (1 km), Jamnagar Airport (130 km); buses and taxis available.",
+    importance: "One of the Char Dham pilgrimage sites and a sacred Jyotirlinga temple."
+  },
+  {
+    name: "Great Rann of Kutch",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/41/Rann_of_Kutch.jpg",
+    description: "Vast salt desert famous for the annual Rann Utsav and white sand under moonlight.",
+    transport: "Bhuj Airport (85 km), Bhuj Railway Station, buses to Dhordo village (Rann Utsav site).",
+    importance: "Unique cultural landscape celebrating Gujarat’s art, crafts, music, and desert life."
+  }
+],
+
+  Haryana:[
+  {
+    name: "Kurukshetra",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Brahma_Sarovar_Kurukshetra.jpg",
+    description: "Historic city believed to be the battlefield of the Mahabharata, featuring many temples and ghats.",
+    transport: "Kurukshetra Railway Station, nearest airport: Chandigarh (90 km); well connected by road.",
+    importance: "Spiritual and historical center with places like Brahma Sarovar and Jyotisar, where Lord Krishna gave the Bhagavad Gita."
+  },
+  {
+    name: "Sultanpur National Park",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Sultanpur_Bird_Sanctuary_3.jpg",
+    description: "Popular bird sanctuary near Gurugram, home to migratory and resident bird species.",
+    transport: "Located 15 km from Gurugram, nearest airport: IGI Airport Delhi (35 km).",
+    importance: "Ideal for bird watchers; attracts species like Siberian cranes, greater flamingos, and painted storks."
+  },
+  {
+    name: "Pinjore Gardens (Yadavindra Gardens)",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/63/Pinjore_Gardens%2C_Haryana.jpg",
+    description: "Historic Mughal-style terraced garden with palaces, fountains, and open spaces.",
+    transport: "Located on the Chandigarh-Shimla highway; nearest railway: Kalka (5 km), Chandigarh Airport (25 km).",
+    importance: "Scenic heritage spot perfect for picnics, leisure walks, and cultural festivals like Baisakhi Mela."
+  },
+  {
+    name: "Panipat Battlefield Memorial",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Panipat_Battlefield_Museum.jpg",
+    description: "Memorial marking the site of three historic battles that shaped Indian history.",
+    transport: "Panipat Railway Station (2 km), connected by road; nearest airport: Delhi (105 km).",
+    importance: "Showcases battle dioramas, weapons, and artifacts from Panipat’s strategic past."
+  },
+  {
+    name: "Morni Hills",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/d6/Morni_Hills.jpg",
+    description: "Scenic hill station in the Shivalik range known for lakes, trekking, and bird watching.",
+    transport: "45 km from Chandigarh; nearest airport and railway: Chandigarh.",
+    importance: "Only hill station in Haryana offering a peaceful retreat with natural beauty."
+  },
+  {
+    name: "Surajkund",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Surajkund.jpg",
+    description: "Ancient reservoir and venue for the world-famous Surajkund International Crafts Mela.",
+    transport: "Located in Faridabad, 20 km from Delhi; nearest metro and railway station: Badarpur Border / Faridabad.",
+    importance: "Celebrates global handicrafts, art, music, and cuisine every February."
+  }
+],
+  HimachalPradesh: [
+  {
+    name: "Shimla",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/79/Ridge_Shimla.jpg",
+    description: "Capital city of Himachal Pradesh, known for colonial architecture, Mall Road, and pleasant climate.",
+    transport: "Shimla Airport (22 km), Kalka Railway Station (connected by toy train); buses and taxis available.",
+    importance: "Popular hill station from British era, famous for scenic views, The Ridge, and Christ Church."
+  },
+  {
+    name: "Manali",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/44/Manali_mountain_view.jpg",
+    description: "Popular resort town in the Kullu Valley, offering snow sports and Himalayan views.",
+    transport: "Nearest airport: Bhuntar (50 km), connected by road from Delhi, Chandigarh, and Kullu.",
+    importance: "Adventure and honeymoon destination with activities like skiing, paragliding, and trekking."
+  },
+  {
+    name: "Dharamshala & McLeod Ganj",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/05/Mcleodganj_View.jpg",
+    description: "Spiritual center and home to the Dalai Lama; surrounded by cedar forests and Tibetan culture.",
+    transport: "Nearest airport: Kangra (15 km), Pathankot Railway Station (90 km); well connected by road.",
+    importance: "Known for monasteries, trekking (Triund), and peaceful mountain ambience."
+  },
+  {
+    name: "Kasauli",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Kasauli_View.jpg",
+    description: "Quiet cantonment hill town near Chandigarh with pine forests and colonial charm.",
+    transport: "Chandigarh Airport (65 km), Kalka Railway Station (40 km); taxis and buses available.",
+    importance: "Ideal for a peaceful getaway with attractions like Monkey Point and Gilbert Trail."
+  },
+  {
+    name: "Spiti Valley",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/31/Spiti_valley.jpg",
+    description: "Cold desert mountain valley with Buddhist monasteries, stunning landscapes, and high-altitude villages.",
+    transport: "Accessible by road from Manali and Shimla (open seasonally); nearest airport: Kullu (250+ km).",
+    importance: "Remote adventure destination, known for Key Monastery, Chandratal Lake, and stargazing."
+  },
+  {
+    name: "Dalhousie",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/79/Dalhousie.jpg",
+    description: "Colonial-era hill station surrounded by pine forests and snow-capped peaks.",
+    transport: "Nearest railway: Pathankot (80 km), Gaggal Airport (135 km); connected by buses and taxis.",
+    importance: "Scenic beauty and heritage charm, gateway to Khajjiar (Mini Switzerland of India)."
+  }
+],
+  Jharkhand: [
+  {
+    name: "Hundru Falls",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Hundru_Falls_Ranchi.jpg",
+    description: "One of the highest waterfalls in Jharkhand, formed by the Subarnarekha River.",
+    transport: "Located 45 km from Ranchi; nearest airport and railway station: Ranchi.",
+    importance: "Scenic natural waterfall ideal for picnics, photography, and nature walks."
+  },
+  {
+    name: "Betla National Park",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Betla_Tiger_Reserve.jpg",
+    description: "Dense forest reserve in Palamu district, part of the Palamau Tiger Reserve.",
+    transport: "Nearest town: Daltonganj (25 km), Ranchi Airport (170 km); road access available.",
+    importance: "Known for tigers, elephants, leopards, and historical forts within the jungle."
+  },
+  {
+    name: "Netarhat",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Netarhat_Plateau.jpg",
+    description: "Scenic hill station in the Chotanagpur Plateau, called the 'Queen of Chotanagpur'.",
+    transport: "156 km from Ranchi; accessible by road via Latehar or Daltonganj.",
+    importance: "Famous for sunrise and sunset views, pine forests, and cool climate."
+  },
+  {
+    name: "Baidhyanath Jyotirlinga Temple (Deoghar)",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Baidyanath_Dham_Main_Temple.jpg",
+    description: "One of the 12 Jyotirlingas dedicated to Lord Shiva, located in Deoghar.",
+    transport: "Nearest railway: Jasidih (7 km), Deoghar Airport (7 km); taxis and autos available.",
+    importance: "Major Hindu pilgrimage site, especially crowded during Shravani Mela."
+  },
+  {
+    name: "Dassam Falls",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Dassam_Falls.jpg",
+    description: "Beautiful waterfall located near Taimara village on the Kanchi River.",
+    transport: "40 km from Ranchi on NH-33; taxis and buses available.",
+    importance: "Popular tourist spot known for scenic views and natural beauty."
+  },
+  {
+    name: "Parasnath Hill",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e1/Shikharji_Parasnath_Hill_Temple.jpg",
+    description: "Highest mountain in Jharkhand and a major Jain pilgrimage site (Shikharji).",
+    transport: "Nearest railway: Parasnath Station; Giridih and Dhanbad also nearby; trek to summit required.",
+    importance: "Sacred site where 20 of 24 Jain Tirthankaras attained Moksha."
+  }
+],
+  Karnataka:[
+  {
+    name: "Mysore Palace",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/33/Mysore_Palace_Night_View.jpg",
+    description: "One of India's grandest palaces, known for its Indo-Saracenic architecture and royal heritage.",
+    transport: "Located in Mysuru; Mysore Railway Station (2 km), nearest airport: Mysore Airport (12 km), Bengaluru (170 km).",
+    importance: "Official residence of the Wadiyar dynasty; centerpiece of the famous Dasara Festival."
+  },
+  {
+    name: "Hampi",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Virupaksha_Temple_in_Hampi.jpg",
+    description: "UNESCO World Heritage Site and ancient city of the Vijayanagara Empire, filled with temples and ruins.",
+    transport: "Nearest railway: Hospet Junction (13 km), nearest airport: Hubli (144 km); taxis and buses available.",
+    importance: "Historic marvel with temples, stone chariots, and bazaars amid boulder-strewn landscapes."
+  },
+  {
+    name: "Coorg (Madikeri)",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Coorg_Karnataka.jpg",
+    description: "Scenic hill station known for coffee plantations, misty hills, and waterfalls.",
+    transport: "Nearest railway: Mysore (118 km), nearest airport: Kannur (95 km), Bengaluru (270 km); road access via bus/taxi.",
+    importance: "Popular for its nature, Abbey Falls, Dubare Elephant Camp, and homestays."
+  },
+  {
+    name: "Jog Falls",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Jog_Falls_Karnataka.jpg",
+    description: "Second highest plunge waterfall in India located on the Sharavathi River.",
+    transport: "Nearest town: Sagara (30 km), nearest railway: Talguppa; nearest airport: Hubli (130 km).",
+    importance: "Breathtaking monsoon destination offering scenic views and trekking opportunities."
+  },
+  {
+    name: "Belur and Halebidu Temples",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/44/Chennakesava_Temple_Belur.jpg",
+    description: "12th-century Hoysala temples known for detailed stone carvings and Dravidian architecture.",
+    transport: "Located in Hassan district; nearest railway: Hassan (40 km); Bengaluru (220 km) by road.",
+    importance: "Architectural masterpieces and symbols of Hoysala heritage and craftsmanship."
+  },
+  {
+    name: "Gokarna",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Om_Beach_Gokarna.jpg",
+    description: "Coastal town known for clean beaches and spiritual ambience, often compared to Goa.",
+    transport: "Gokarna Road Railway Station (10 km), nearest airport: Goa’s Dabolim (140 km); buses and taxis available.",
+    importance: "Popular for Om Beach, Mahabaleshwar Temple, and laid-back beach vibes."
+  }
+],
+  Kerala:[
+  {
+    name: "Alleppey Backwaters",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/06/Houseboat_in_Alleppey.jpg",
+    description: "Scenic network of canals and lagoons where houseboat cruises offer a peaceful experience.",
+    transport: "Alleppey Railway Station (4 km), nearest airport: Cochin International Airport (83 km); taxis and boats available.",
+    importance: "Famous for traditional houseboats, paddy fields, and Kerala’s rural charm."
+  },
+  {
+    name: "Munnar",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/b3/Munnar_tea_plantations.jpg",
+    description: "Hill station with tea plantations, misty valleys, and pleasant weather year-round.",
+    transport: "Nearest railway: Aluva (110 km), nearest airport: Cochin International Airport (110 km); accessible by road.",
+    importance: "Ideal honeymoon and trekking destination; known for Eravikulam National Park and Neelakurinji flowers."
+  },
+  {
+    name: "Kochi (Cochin)",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Kochi_Fort_Kerala.jpg",
+    description: "Historic port city blending colonial heritage, art culture, and backwaters.",
+    transport: "Cochin International Airport, Ernakulam Junction Railway Station; city buses and ferries available.",
+    importance: "Known for Fort Kochi, Chinese fishing nets, Mattancherry Palace, and Biennale art festival."
+  },
+  {
+    name: "Wayanad",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/37/Wayanad.jpg",
+    description: "Lush green district in the Western Ghats known for wildlife, waterfalls, and trekking.",
+    transport: "Nearest railway: Kozhikode (90 km), nearest airport: Calicut International Airport (100 km); road access available.",
+    importance: "Popular for Edakkal Caves, Banasura Sagar Dam, Pookode Lake, and tribal culture."
+  },
+  {
+    name: "Thekkady (Periyar Wildlife Sanctuary)",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Periyar_lake.jpg",
+    description: "Wildlife sanctuary surrounding Periyar Lake, known for elephants, boating, and eco-tourism.",
+    transport: "Nearest railway: Kottayam (114 km), nearest airport: Madurai (140 km), Cochin (145 km); road accessible.",
+    importance: "Biodiversity hotspot and ideal for bamboo rafting, nature walks, and jungle safaris."
+  },
+  {
+    name: "Varkala Beach",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Varkala_Beach_Kerala.jpg",
+    description: "Beautiful beach backed by cliffs with natural springs and serene ocean views.",
+    transport: "Varkala Railway Station (3 km), Trivandrum Airport (50 km); easily accessible by road.",
+    importance: "Spiritual and scenic destination, famous for the 2,000-year-old Janardana Swamy Temple."
+  }
+],
+    MadhyaPradesh:[
+  {
+    name: "Khajuraho Temples",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Khajuraho_Temple.jpg",
+    description: "UNESCO World Heritage site known for stunning temples with intricate erotic and mythological carvings.",
+    transport: "Khajuraho Airport (5 km), Khajuraho Railway Station (6 km); taxis and buses available.",
+    importance: "Famous for its Nagara-style architecture and artistic expression from the Chandela dynasty."
+  },
+  {
+    name: "Sanchi Stupa",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/27/Sanchi_Stupa.jpg",
+    description: "Ancient Buddhist stupa built by Emperor Ashoka in the 3rd century BCE.",
+    transport: "Nearest railway: Sanchi (1 km), Bhopal Airport (50 km); buses and taxis from Bhopal.",
+    importance: "UNESCO-listed and one of the oldest stone structures in India, significant to Buddhist heritage."
+  },
+  {
+    name: "Kanha National Park",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Tiger_at_Kanha_National_Park.jpg",
+    description: "One of India's premier tiger reserves and inspiration behind Kipling’s *Jungle Book*.",
+    transport: "Nearest railhead: Jabalpur (160 km), nearest airport: Jabalpur or Raipur; buses/taxis to park.",
+    importance: "Rich biodiversity, tiger sightings, and lush sal forests make it a wildlife haven."
+  },
+  {
+    name: "Ujjain (Mahakaleshwar Temple)",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Mahakaleshwar_Temple_Ujjain.jpg",
+    description: "Ancient city on the Shipra River, home to one of the 12 Jyotirlingas – Mahakaleshwar Temple.",
+    transport: "Ujjain Railway Station (2 km), Indore Airport (55 km); taxis and buses available.",
+    importance: "Major Hindu pilgrimage site and Kumbh Mela location, deeply tied to Shaivism."
+  },
+  {
+    name: "Bhimbetka Rock Shelters",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/fd/Bhimbetka_rock_paintings.jpg",
+    description: "Prehistoric cave art site with over 700 rock shelters depicting ancient life and rituals.",
+    transport: "45 km from Bhopal; nearest railway and airport: Bhopal; taxis and tour buses available.",
+    importance: "UNESCO site showcasing India’s Stone Age heritage through art and archaeology."
+  },
+  {
+    name: "Gwalior Fort",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/fd/Gwalior_fort_panorama.jpg",
+    description: "Massive hilltop fort with palaces, temples, and incredible views of Gwalior city.",
+    transport: "Gwalior Airport (10 km), Gwalior Railway Station (3 km); autos and taxis widely available.",
+    importance: "Historical stronghold of multiple dynasties, famous for Man Singh Palace and Tansen’s tomb nearby."
+  }
+],
+  Maharashtra: [
+  {
+    name: "Gateway of India",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Gateway_of_India_Mumbai_03-2016_img3.jpg",
+    description: "Iconic sea-facing arch-monument in Mumbai built during the British Raj.",
+    transport: "Chhatrapati Shivaji Maharaj Terminus (2 km), Mumbai Airport (25 km); well connected by taxis and local trains.",
+    importance: "Historical landmark and symbolic entry point to colonial India; popular waterfront tourist spot."
+  },
+  {
+    name: "Ajanta Caves",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Ajanta_Caves_panorama.jpg",
+    description: "UNESCO World Heritage Site featuring rock-cut Buddhist caves with ancient murals and sculptures.",
+    transport: "Nearest railhead: Jalgaon (60 km), Aurangabad Airport (100 km); taxis and tourist buses available.",
+    importance: "Masterpieces of Buddhist religious art, dating back to 2nd century BCE."
+  },
+  {
+    name: "Ellora Caves",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Kailasa_temple_at_Ellora.jpg",
+    description: "Rock-cut cave complex with Hindu, Buddhist, and Jain monuments, including the stunning Kailasa Temple.",
+    transport: "Nearest city: Aurangabad (30 km), Aurangabad Airport and Railway; taxis and buses available.",
+    importance: "Symbol of religious harmony and architectural brilliance from the Rashtrakuta dynasty."
+  },
+  {
+    name: "Shirdi",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Shirdi_Sai_Baba_Temple.jpg",
+    description: "Pilgrimage town famous for the Sai Baba Temple, attracting devotees from across India.",
+    transport: "Shirdi Airport (15 km), Sainagar Shirdi Railway Station; taxis, buses, and autos available.",
+    importance: "Major spiritual destination associated with the revered saint Sai Baba of Shirdi."
+  },
+  {
+    name: "Lonavala-Khandala",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Khandala_valley.jpg",
+    description: "Twin hill stations in the Sahyadri range known for waterfalls, valleys, and greenery.",
+    transport: "Nearest railhead: Lonavala Railway Station, Mumbai (83 km), Pune (65 km); accessible by road/train.",
+    importance: "Popular monsoon destination and weekend getaway with caves, dams, and forts."
+  },
+  {
+    name: "Mahabaleshwar",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Mahabaleshwar_valley.jpg",
+    description: "Charming hill station in the Western Ghats, famous for strawberries and panoramic views.",
+    transport: "Nearest railhead: Wathar (60 km), Pune Airport (120 km); well connected by road.",
+    importance: "Known for scenic viewpoints like Arthur’s Seat, boating at Venna Lake, and historic temples."
+  }
+],
+  Manipur: [
+  {
+    name: "Loktak Lake",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/b7/Loktak_Lake.jpg",
+    description: "The largest freshwater lake in Northeast India, known for its floating phumdis (islands).",
+    transport: "48 km from Imphal; Imphal Airport is the nearest airport with taxis and buses available.",
+    importance: "Ecological wonder and lifeline of Manipur; home to Keibul Lamjao — the only floating national park in the world."
+  },
+  {
+    name: "Keibul Lamjao National Park",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Sangai_in_Keibul_Lamjao_National_Park.jpg",
+    description: "World’s only floating national park, located on Loktak Lake.",
+    transport: "53 km from Imphal; nearest airport: Imphal, followed by local transport.",
+    importance: "Habitat of the endangered Sangai deer (brow-antlered deer), the state animal of Manipur."
+  },
+  {
+    name: "Kangla Fort",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Kangla_Gate_Imphal.jpg",
+    description: "Ancient royal palace and former seat of Manipur's rulers, located in the heart of Imphal.",
+    transport: "Situated in Imphal city; well connected by road and close to Imphal Airport.",
+    importance: "Symbol of Manipur's heritage, showcasing Meitei architecture and historic significance."
+  },
+  {
+    name: "Ima Keithel (Mother’s Market)",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/10/Ima_Keithel_Imphal.jpg",
+    description: "Asia’s largest all-women run market, located in Imphal.",
+    transport: "Located centrally in Imphal city; easily reachable by auto or cab from Imphal Airport.",
+    importance: "Unique cultural and economic hub run entirely by women, selling local crafts, food, and textiles."
+  },
+  {
+    name: "Shirui Hills",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Shirui_Lily_in_Ukhrul.jpg",
+    description: "Hilly region in Ukhrul district, famous for the rare Shirui Lily which blooms in May–June.",
+    transport: "Around 90 km from Imphal; reachable by road via Ukhrul town.",
+    importance: "Ecologically important for the endangered Shirui Lily and a popular trekking spot."
+  },
+  {
+    name: "Andro Village",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/be/Andro_Traditional_House_Manipur.jpg",
+    description: "Cultural village showcasing traditional Meitei lifestyle, pottery, and heritage museum.",
+    transport: "Located 25 km from Imphal; accessible by local transport.",
+    importance: "Ethnic tourism hotspot with cultural huts, traditional art, and crafts exhibitions."
+  }
+],
+  Meghalaya:[
+  {
+    name: "Cherrapunji (Sohra)",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/1d/Nohkalikai_Falls_Cherrapunji.jpg",
+    description: "One of the wettest places on Earth, known for waterfalls, caves, and scenic valleys.",
+    transport: "58 km from Shillong; nearest airport: Shillong Airport (Umroi), taxis and buses available.",
+    importance: "Famous for Nohkalikai Falls, Mawsmai Caves, and rich rainfall-based ecology."
+  },
+  {
+    name: "Living Root Bridges (Nongriat)",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Double_Decker_Living_Root_Bridge.jpg",
+    description: "Natural bridges formed by guiding tree roots across rivers, especially the Double Decker Root Bridge.",
+    transport: "Trek from Tyrna Village near Cherrapunji; road access from Shillong.",
+    importance: "Unique example of bioengineering and sustainable tribal practices."
+  },
+  {
+    name: "Shillong",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Shillong_view_from_Shillong_peak.jpg",
+    description: "The capital city, known as the ‘Scotland of the East’, with colonial charm and rolling hills.",
+    transport: "Shillong Airport (Umroi - 30 km), Guwahati Airport (125 km); buses and taxis to city.",
+    importance: "Major cultural and musical hub; home to Shillong Peak, Ward’s Lake, and Don Bosco Museum."
+  },
+  {
+    name: "Mawlynnong Village",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/05/Mawlynnong_roadside.jpg",
+    description: "Awarded the ‘Cleanest Village in Asia’, known for eco-tourism and cleanliness.",
+    transport: "90 km from Shillong; nearest airport: Shillong or Guwahati; accessible by road.",
+    importance: "Model village with bamboo dustbins, floral footpaths, and community tourism."
+  },
+  {
+    name: "Dawki & Umngot River",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Umngot_River_Dawki.jpg",
+    description: "Crystal-clear river on the India-Bangladesh border, popular for boating.",
+    transport: "82 km from Shillong; taxis and buses available.",
+    importance: "Boating hotspot famous for the transparent water that makes boats appear floating mid-air."
+  },
+  {
+    name: "Laitlum Canyons",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/77/Laitlum_Canyons_Meghalaya.jpg",
+    description: "A panoramic hilltop viewpoint offering vast vistas of gorges and valleys.",
+    transport: "24 km from Shillong; reachable by road via Smit village.",
+    importance: "Offbeat destination ideal for photography, trekking, and experiencing Meghalaya’s natural grandeur."
+  }
+],
+  Mizoram: [
+  {
+    name: "Aizawl",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/41/Aizawl_Cityscape.jpg",
+    description: "The capital city of Mizoram, nestled in the hills with vibrant culture and scenic views.",
+    transport: "Lengpui Airport (32 km), well-connected by road to other towns.",
+    importance: "Cultural and administrative hub of Mizoram, known for Solomon’s Temple, Durtlang Hills, and local handicrafts."
+  },
+  {
+    name: "Reiek",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Reiek_tlang.jpg",
+    description: "A scenic hill near Aizawl offering panoramic views and traditional Mizo village experience.",
+    transport: "29 km from Aizawl; reachable by taxi or local transport.",
+    importance: "Popular for trekking, Mizoram Anthurium Festival, and insights into tribal heritage."
+  },
+  {
+    name: "Phawngpui (Blue Mountain National Park)",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/29/Phawngpui.jpg",
+    description: "The highest peak in Mizoram, located in a national park rich in flora and fauna.",
+    transport: "Around 230 km from Aizawl; road access via Lawngtlai.",
+    importance: "Trekking destination and biodiversity hotspot with rare orchids, birds, and butterflies."
+  },
+  {
+    name: "Tam Dil Lake",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/26/Tamdil_Lake_Mizoram.jpg",
+    description: "Serene artificial lake surrounded by forests, popular for picnics and boating.",
+    transport: "110 km from Aizawl near Saitual; accessible by road.",
+    importance: "Leisure destination and ideal for nature lovers and bird watchers."
+  },
+  {
+    name: "Vantawng Falls",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f1/Vantawng_Falls_Mizoram.jpg",
+    description: "Highest waterfall in Mizoram, cascading down through dense forests.",
+    transport: "137 km from Aizawl near Thenzawl town; taxis and buses available.",
+    importance: "Spectacular natural wonder surrounded by lush greenery and scenic hills."
+  },
+  {
+    name: "Lunglei",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/25/Lunglei_Mizoram.jpg",
+    description: "Second-largest town in Mizoram, known for tranquil beauty and scenic viewpoints.",
+    transport: "170 km south of Aizawl; well-connected by road.",
+    importance: "Popular base for exploring southern Mizoram, with hills, rivers, and churches."
+  }
+],
+  Nagaland:[
+  {
+    name: "Kohima",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6c/Kohima_city_view.jpg",
+    description: "Capital of Nagaland, known for its historic WWII cemetery and Angami tribal culture.",
+    transport: "Nearest airport: Dimapur (74 km), Kohima connected by road; Dimapur Railway Station is closest.",
+    importance: "Home to the famous Hornbill Festival and the Kohima War Cemetery honoring WWII soldiers."
+  },
+  {
+    name: "Dimapur",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Kachari_Ruins_Dimapur.jpg",
+    description: "The commercial hub of Nagaland and entry point for most travelers.",
+    transport: "Dimapur Airport and Railway Station; well-connected by road to other towns.",
+    importance: "Features include the 13th-century Kachari Ruins, bustling markets, and cultural diversity."
+  },
+  {
+    name: "Dzukou Valley",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/53/Dzukou_Valley_View.jpg",
+    description: "Breathtaking valley on the Nagaland-Manipur border, famous for seasonal wildflowers and trekking.",
+    transport: "20 km trek from Viswema (near Kohima); local taxis and guides available.",
+    importance: "Known as the 'Valley of Flowers of the East', offering surreal landscapes and adventure."
+  },
+  {
+    name: "Mon",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Mon_Village_View.jpg",
+    description: "Remote district known for the Konyak tribe, famous for their tattooed warriors and traditional lifestyle.",
+    transport: "Nearest town with rail/air access: Dibrugarh or Dimapur; road travel required.",
+    importance: "Cultural heartland showcasing headhunting history, Longwa village, and tribal festivals."
+  },
+  {
+    name: "Mokokchung",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/61/Mokokchung_town.jpg",
+    description: "Town known as the cultural and intellectual capital of the Ao Nagas.",
+    transport: "Nearest airport and railhead: Dimapur (190 km); road travel via NH-2.",
+    importance: "Cultural center with heritage villages, handicrafts, and tribal festivals."
+  },
+  {
+    name: "Khonoma Village",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f1/Khonoma_Village.jpg",
+    description: "Asia’s first green village, near Kohima, known for eco-tourism and conservation practices.",
+    transport: "20 km from Kohima; easily accessible by local taxis.",
+    importance: "Historical Angami warrior village and model for sustainable living and community forest protection."
+  }
+],
+  Odisha:[
+  {
+    name: "Konark Sun Temple",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/bf/Konark_Sun_Temple_Front_View.jpg",
+    description: "13th-century UNESCO World Heritage site built in the shape of a colossal chariot dedicated to the Sun God.",
+    transport: "Nearest airport: Bhubaneswar (65 km), nearest railhead: Puri (35 km); accessible by road.",
+    importance: "Architectural marvel of Kalinga style with intricate carvings symbolizing time and cosmic rhythm."
+  },
+  {
+    name: "Jagannath Temple, Puri",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/44/Shree_Jagannath_Temple_Puri.jpg",
+    description: "One of the Char Dham pilgrimage sites dedicated to Lord Jagannath, famous for the annual Rath Yatra.",
+    transport: "Located in Puri city; nearest airport: Bhubaneswar (60 km), railway station nearby.",
+    importance: "Spiritual center attracting millions; known for its massive chariots and unique rituals."
+  },
+  {
+    name: "Chilika Lake",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/1d/Chilika_lake_from_Satapada.jpg",
+    description: "Asia’s largest brackish water lagoon and a paradise for bird watchers and dolphin sightings.",
+    transport: "Nearest city: Puri (50 km), Bhubaneswar (100 km); road access to Satapada and Barkul.",
+    importance: "Wetland of international importance under the Ramsar Convention; rich in migratory birdlife."
+  },
+  {
+    name: "Lingaraj Temple, Bhubaneswar",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Lingaraj_Temple_Bhubaneswar.jpg",
+    description: "Ancient Hindu temple dedicated to Lord Shiva and a fine example of Kalinga architecture.",
+    transport: "Located in Bhubaneswar; well-connected by airport, rail, and road.",
+    importance: "Major Shaivite temple drawing devotees year-round; centerpiece of Bhubaneswar’s temple heritage."
+  },
+  {
+    name: "Udayagiri and Khandagiri Caves",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Udayagiri_Caves_Orissa_India.jpg",
+    description: "Ancient rock-cut caves dating back to the 2nd century BCE, carved by Jain monks.",
+    transport: "Located in Bhubaneswar (8 km from city center); easily accessible by auto, cab or bus.",
+    importance: "Historic site reflecting Jain influence, royal patronage, and monastic life during ancient Kalinga rule."
+  },
+  {
+    name: "Simlipal National Park",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Barehipani_Falls_Simlipal_National_Park.jpg",
+    description: "Tiger reserve and biosphere reserve in northern Odisha, rich in wildlife and waterfalls.",
+    transport: "Nearest town: Baripada (20 km); Bhubaneswar (270 km); reachable by road.",
+    importance: "Ecotourism hotspot and home to elephants, tigers, and the stunning Barehipani Falls."
+  }
+],
+  Punjab:[
+  {
+    name: "Golden Temple (Harmandir Sahib), Amritsar",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Golden_Temple%2C_Amritsar.jpg",
+    description: "The holiest shrine of Sikhism, known for its golden dome and spiritual ambiance.",
+    transport: "Located in Amritsar; Sri Guru Ram Dass Jee International Airport (13 km), Amritsar Railway Station (2 km).",
+    importance: "Major pilgrimage site offering free meals to all (langar) and symbolizing equality and service."
+  },
+  {
+    name: "Jallianwala Bagh",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f8/Jallianwala_Bagh_Memorial.jpg",
+    description: "Historic garden and memorial commemorating the 1919 massacre by British troops.",
+    transport: "Walking distance from Golden Temple; easily accessible from Amritsar city center.",
+    importance: "A powerful reminder of India’s freedom struggle and colonial oppression."
+  },
+  {
+    name: "Wagah Border",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/41/Wagah_Border_Ceremony.jpg",
+    description: "India-Pakistan border crossing near Amritsar, famous for the Beating Retreat Ceremony.",
+    transport: "30 km from Amritsar; local taxis and buses available.",
+    importance: "Patriotic destination known for daily ceremonial parades and flag-lowering ritual."
+  },
+  {
+    name: "Anandpur Sahib",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Anandpur_Sahib_-_Gurudwara_Keshgarh_Sahib.jpg",
+    description: "One of the five Takhts (seats of authority) in Sikhism, known for its religious significance.",
+    transport: "Nearest railway: Anandpur Sahib Station; Chandigarh Airport (80 km), well-connected by road.",
+    importance: "Birthplace of the Khalsa and home to Hola Mohalla — a vibrant Sikh festival."
+  },
+  {
+    name: "Sheesh Mahal, Patiala",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Sheesh_Mahal_Patiala.jpg",
+    description: "19th-century palace built by Maharaja Narinder Singh with mirror work and a museum.",
+    transport: "Located in Patiala city; nearest airport: Chandigarh (60 km), Patiala Railway Station nearby.",
+    importance: "Reflects Punjab’s royal heritage and houses rare paintings, medals, and artifacts."
+  },
+  {
+    name: "Punjab Agricultural University Museum, Ludhiana",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Punjab_Agricultural_University_Museum.jpg",
+    description: "Museum showcasing Punjab’s rural life, agricultural tools, and traditions.",
+    transport: "Located in Ludhiana; Ludhiana Railway Station (6 km), Sahnewal Airport (13 km).",
+    importance: "Preserves and promotes Punjabi folk culture and rural heritage."
+  }
+],
+  Rajasthan: [
+  {
+    name: "Amber Fort",
+    image: "https://s3.india.com/travel/wp-content/uploads/2014/09/amber-fort.jpg",
+    description: "A beautiful fort with artistic architecture near Jaipur.",
+    transport: "Jaipur Airport (13 km), Jaipur Railway Station (11 km), taxis and buses available.",
+    importance: "UNESCO site representing Rajputana glory with mirror work, gardens, and courtyards.",
+    history: "Built in the 16th century by Raja Man Singh I, the fort showcases a blend of Hindu and Mughal architecture.",
+    bestTimeToVisit: "October to March",
+    entryFee: "₹100 (Indians), ₹550 (Foreigners)",
+    timings: "8:00 AM to 5:30 PM",
+    nearbyAttractions: ["Jaigarh Fort", "Jal Mahal", "Nahargarh Fort"],
+    tips: "Wear comfortable shoes as you’ll be walking a lot. Early morning visits are best to avoid crowds."
       },
       {
-        name: "City Palace, Udaipur",
-        image: "https://upload.wikimedia.org/wikipedia/commons/6/60/Udaipur_City_Palace_Panorama.jpg",
-        description: "A majestic palace complex overlooking Lake Pichola in Udaipur.",
-        transport: "Udaipur Airport (24 km), Udaipur Railway Station (4 km), taxis and auto-rickshaws available.",
-        importance: "Blend of Rajasthani and Mughal architecture; home to museums, courtyards, and stunning lake views."
-      }
-    ],
-    TamilNadu: [
-      {
-        name: "Meenakshi Temple",
-        image: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Meenakshi_Temple%2C_Madurai%2C_Tamil_Nadu%2C_India.jpg",
-        description: "Historic temple in Madurai with stunning sculptures.",
-        transport: "Madurai airport and city buses available.",
-        importance: "Cultural and religious center, known for Dravidian architecture and temple festivals."
-      }
-    ],
-    Maharashtra: [
-      {
-        name: "Gateway of India",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Gateway_of_India_Mumbai_03-2016_img3.jpg/320px-Gateway_of_India_Mumbai_03-2016_img3.jpg",
-        description: "Iconic sea-facing monument in Mumbai.",
-        transport: "Mumbai Airport, CST Railway Station, autos and taxis available.",
-        importance: "Historical arrival point for British dignitaries, a symbol of colonial heritage."
-      }
-    ],
-    Karnataka: [
-      {
-        name: "Mysore Palace",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Mysore_Palace_Night_View.jpg/320px-Mysore_Palace_Night_View.jpg",
-        description: "Famous royal palace in Mysore.",
-        transport: "Mysuru Airport, Mysore Junction, local buses and cabs.",
-        importance: "Example of Indo-Saracenic architecture and home to the Wadiyar dynasty."
-      }
-    ],
-    Kerala: [
-      {
-        name: "Alleppey Backwaters",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Houseboat_in_Alleppey.jpg/320px-Houseboat_in_Alleppey.jpg",
-        description: "Scenic houseboat cruises through lagoons.",
-        transport: "Cochin Airport, Alleppey Railway Station, local boats and taxis.",
-        importance: "Key ecotourism site offering traditional Kerala culture and nature experiences."
-      }
-    ]
+    name: "City Palace, Udaipur",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/60/Udaipur_City_Palace_Panorama.jpg",
+    description: "Palatial complex on the banks of Lake Pichola, combining Rajasthani and Mughal design.",
+    transport: "Udaipur Airport (24 km), Udaipur Railway Station (4 km); autos and taxis easily available.",
+    importance: "Features museums, courtyards, and stunning lake views; former royal residence of Mewar rulers."
+  },
+  {
+    name: "Jaisalmer Fort",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/1d/Jaisalmer_Fort_Panorama.jpg",
+    description: "Golden sandstone fort also known as Sonar Quila, still inhabited by local families.",
+    transport: "Jaisalmer Railway Station (2 km), nearest airport: Jaisalmer or Jodhpur; autos and taxis available.",
+    importance: "UNESCO site and one of the few 'living forts' with shops, homes, and temples inside."
+  },
+  {
+    name: "Mehrangarh Fort, Jodhpur",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Mehrangarh_Fort_Jodhpur.jpg",
+    description: "One of the largest forts in India, perched atop a rocky hill overlooking the Blue City.",
+    transport: "Jodhpur Airport (8 km), Jodhpur Railway Station (5 km); taxis and rickshaws widely available.",
+    importance: "Features expansive courtyards, museums, cannons, and panoramic views of Jodhpur."
+  },
+  {
+    name: "Ranthambore National Park",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/db/Tiger_in_Ranthambore.jpg",
+    description: "Wildlife sanctuary known for Bengal tigers, ancient ruins, and jungle safaris.",
+    transport: "Nearest railway: Sawai Madhopur (11 km), Jaipur Airport (160 km); taxis and safari vehicles available.",
+    importance: "One of India’s best tiger reserves; ideal for wildlife photography and nature tourism."
+  },
+  {
+    name: "Pushkar",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Pushkar_Lake_View.jpg",
+    description: "Holy town famous for the Brahma Temple and Pushkar Lake, and its annual camel fair.",
+    transport: "Nearest railway: Ajmer (15 km), Jaipur Airport (150 km); accessible by road.",
+    importance: "Spiritual destination and cultural hotspot featuring one of the few Brahma temples in the world."
+  }
+],
+  Sikkim: [
+  {
+    name: "Gangtok",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Gangtok_cityscape.jpg",
+    description: "The capital city of Sikkim, known for monasteries, markets, and mountain views.",
+    transport: "Nearest airport: Pakyong Airport (31 km), Bagdogra Airport (124 km); nearest railway: New Jalpaiguri (NJP).",
+    importance: "Gateway to eastern Himalayas, offering a blend of culture, adventure, and modern urban life."
+  },
+  {
+    name: "Tsomgo Lake",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/87/Tsomgo_Lake_Sikkim.jpg",
+    description: "Glacial lake located at an altitude of 3,753 meters, surrounded by snow-clad mountains.",
+    transport: "38 km from Gangtok; permits required for tourists; taxis available from the city.",
+    importance: "Sacred lake for locals; changes color with seasons and often frozen in winter."
+  },
+  {
+    name: "Nathula Pass",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Nathu_La_Pass.jpg",
+    description: "High-altitude mountain pass on the Indo-China border, part of the ancient Silk Route.",
+    transport: "56 km from Gangtok; Indian nationals need permits; accessible by road via guided tours.",
+    importance: "Strategic and historic location offering snow views and Indo-China trade history insights."
+  },
+  {
+    name: "Yumthang Valley",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Yumthang_Valley.jpg",
+    description: "Beautiful valley in North Sikkim, known as the 'Valley of Flowers'.",
+    transport: "125 km from Gangtok; requires permit and overnight stay in Lachung.",
+    importance: "Famous for alpine meadows, hot springs, and rhododendron blooms in spring."
+  },
+  {
+    name: "Pelling",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Beautiful_Pelling_view.jpg",
+    description: "Scenic town in West Sikkim known for views of Kanchenjunga and historical sites.",
+    transport: "130 km from Gangtok; nearest railhead: NJP; nearest airport: Pakyong or Bagdogra.",
+    importance: "Home to Pemayangtse Monastery, Rabdentse Ruins, and the Sky Walk – India’s highest footbridge."
+  },
+  {
+    name: "Ravangla (Buddha Park)",
+    image: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Ravangla_Buddha_Park_Sikkim.jpg",
+    description: "Hill town with panoramic views and a towering Buddha statue.",
+    transport: "70 km from Gangtok; taxis and shared vehicles available.",
+    importance: "Buddha Park houses a 130-foot statue of Lord Buddha and is part of the Himalayan Buddhist Circuit."
+  }
+],
+  Tamilnadu:[
+  {
+    name: "Meenakshi Amman Temple, Madurai",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Meenakshi_Temple%2C_Madurai%2C_Tamil_Nadu%2C_India.jpg",
+    description: "Historic Hindu temple dedicated to Goddess Meenakshi and Lord Sundareswarar.",
+    transport: "Madurai Airport (12 km), Madurai Railway Station (2 km); well-connected by buses and autos.",
+    importance: "Masterpiece of Dravidian architecture and a major center of Tamil culture and spirituality."
+  },
+  {
+    name: "Brihadeeswarar Temple, Thanjavur",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/18/Brihadeeswarar_Temple.jpg",
+    description: "UNESCO World Heritage Site built by Raja Raja Chola I in the 11th century.",
+    transport: "Thanjavur Railway Station (1.5 km), Trichy Airport (60 km); taxis and autos available.",
+    importance: "Marvel of Chola architecture with a massive Shiva lingam and world’s tallest temple tower."
+  },
+  {
+    name: "Rameswaram",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Ramanathaswamy_Temple_Rameswaram.jpg",
+    description: "Holy island town known for Ramanathaswamy Temple and connection to the Ramayana.",
+    transport: "Rameswaram Railway Station, nearest airport: Madurai (170 km); road bridge connects to mainland.",
+    importance: "One of the Char Dham pilgrimage sites, with sacred wells and sea baths."
+  },
+  {
+    name: "Kanyakumari",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/d6/Kanyakumari_Vivekananda_Rock.jpg",
+    description: "Southernmost tip of India where the Arabian Sea, Bay of Bengal, and Indian Ocean meet.",
+    transport: "Kanyakumari Railway Station; nearest airport: Trivandrum (90 km); buses and taxis available.",
+    importance: "Famous for sunrise/sunset views, Vivekananda Rock Memorial, and the Thiruvalluvar Statue."
+  },
+  {
+    name: "Mahabalipuram",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Pancha_Rathas%2C_Mahabalipuram.jpg",
+    description: "UNESCO World Heritage Site of ancient rock-cut temples and monuments along the Coromandel Coast.",
+    transport: "58 km from Chennai; reachable by road, taxis, or buses.",
+    importance: "Famous for Shore Temple, Arjuna’s Penance, and the Five Rathas — examples of Pallava art."
+  },
+  {
+    name: "Ooty (Udhagamandalam)",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/81/Ooty_view.jpg",
+    description: "Popular hill station in the Nilgiris, also known as the 'Queen of Hill Stations'.",
+    transport: "Nearest railhead: Mettupalayam (47 km), Coimbatore Airport (85 km); toy train and road options available.",
+    importance: "Famous for its botanical gardens, tea estates, scenic lakes, and colonial charm."
+  }
+],
+  Telangana:[
+  {
+    name: "Charminar, Hyderabad",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/84/Charminar_Hyderabad_India.jpg",
+    description: "Iconic 16th-century monument with four minarets, located in the heart of Hyderabad.",
+    transport: "Rajiv Gandhi International Airport (20 km), Nampally Railway Station (5 km); autos and buses available.",
+    importance: "Symbol of Hyderabad; a blend of Indo-Islamic architecture and bustling local bazaars like Laad Bazaar."
+  },
+  {
+    name: "Golconda Fort",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Golconda_Fort_Hyderabad.jpg",
+    description: "Historic fort known for its acoustics, palaces, and engineering marvels.",
+    transport: "Located 11 km from Hyderabad city center; accessible by road, autos, and cabs.",
+    importance: "Once a center of diamond trade; famous for the Koh-i-Noor origin and panoramic city views."
+  },
+  {
+    name: "Ramoji Film City",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Ramoji_Film_City.jpg",
+    description: "World’s largest integrated film city and theme park spread over 2000 acres.",
+    transport: "Located 30 km from Hyderabad; well-connected by road with tourist buses and cabs.",
+    importance: "Popular film shooting location and entertainment hub with sets, rides, and live shows."
+  },
+  {
+    name: "Thousand Pillar Temple, Warangal",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/08/1000_Pillar_Temple_Warangal.jpg",
+    description: "Ancient temple built by the Kakatiya dynasty, dedicated to Shiva, Vishnu, and Surya.",
+    transport: "Warangal Railway Station (3 km), 150 km from Hyderabad; accessible by road.",
+    importance: "Masterpiece of Kakatiya architecture known for intricately carved pillars and rock-cut structures."
+  },
+  {
+    name: "Bhadrakali Temple, Warangal",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e4/Bhadrakali_Temple_Warangal.jpg",
+    description: "Historic temple of Goddess Bhadrakali set on a hilltop overlooking a lake.",
+    transport: "Located 5 km from Warangal city center; well-connected by road.",
+    importance: "Spiritual site with serene surroundings; major center of Shakti worship in Telangana."
+  },
+  {
+    name: "Kuntala Waterfalls",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/72/Kuntala_waterfalls_Adilabad.jpg",
+    description: "Highest waterfall in Telangana, cascading from 45 meters in the Sahyadri hills.",
+    transport: "260 km from Hyderabad, 35 km from Nirmal; nearest railhead: Adilabad.",
+    importance: "Picturesque destination for nature lovers and monsoon travelers."
+  }
+],
+  Tripura:[
+  {
+    name: "Ujjayanta Palace, Agartala",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/ee/Ujjayanta_Palace.jpg",
+    description: "A majestic royal palace built in the early 20th century, now serving as a state museum.",
+    transport: "Located in Agartala city; nearest airport: Maharaja Bir Bikram Airport (8 km); railway station nearby.",
+    importance: "Showcases Tripura’s royal heritage, culture, art, and tribal life under one roof."
+  },
+  {
+    name: "Neermahal",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Neermahal_Water_Palace_Tripura.jpg",
+    description: "A beautiful water palace built in the middle of Rudrasagar Lake by the Tripura kings.",
+    transport: "55 km from Agartala; nearest railhead: Melaghar; accessible by boat and road.",
+    importance: "One of the few lake palaces in India, blending Hindu and Mughal architectural styles."
+  },
+  {
+    name: "Unakoti",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Unakoti_sculptures_Tripura.jpg",
+    description: "An ancient Shaivite pilgrimage site with gigantic rock-cut carvings dating back to the 7th–9th century.",
+    transport: "178 km from Agartala; nearest railhead: Kumarghat (20 km); accessible by road.",
+    importance: "Known as the 'Angkor Wat of the Northeast'; mysterious site with thousands of bas-reliefs and sculptures."
+  },
+  {
+    name: "Tripura Sundari Temple, Udaipur",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Tripura_Sundari_Temple.jpg",
+    description: "One of the 51 Shakti Peethas, dedicated to Goddess Tripura Sundari.",
+    transport: "55 km from Agartala in Udaipur; well-connected by road.",
+    importance: "Important Hindu pilgrimage site, especially during Diwali and local festivals."
+  },
+  {
+    name: "Sepahijala Wildlife Sanctuary",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/83/Clouded_Leopard_at_Sepahijala_Zoo.jpg",
+    description: "Large sanctuary housing clouded leopards, birds, and primates along with a botanical garden and lake.",
+    transport: "25 km from Agartala; accessible via road and local transport.",
+    importance: "Popular for eco-tourism, boating, zoo visit, and bird watching."
+  },
+  {
+    name: "Jampui Hills",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Jampui_Hills_View_Tripura.jpg",
+    description: "Highest hill range in Tripura offering panoramic views and orange orchards.",
+    transport: "200 km from Agartala; nearest rail station: Dharmanagar; road travel required.",
+    importance: "Known for its scenic beauty, trekking trails, sunrise/sunset views, and Orange Festival."
+  }
+],
+  Uttarpradesh:[
+  {
+    name: "Taj Mahal, Agra",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg",
+    description: "UNESCO World Heritage Site and one of the Seven Wonders of the World, built by Shah Jahan in memory of Mumtaz Mahal.",
+    transport: "Agra Airport (7 km), Agra Cantt Railway Station (6 km); taxis and buses available.",
+    importance: "Icon of love and India’s most visited monument, known for its stunning Mughal architecture and white marble beauty."
+  },
+  {
+    name: "Varanasi (Kashi)",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Varanasi_Ghats.jpg",
+    description: "One of the world's oldest living cities and a major Hindu pilgrimage center on the banks of the Ganges.",
+    transport: "Lal Bahadur Shastri Airport (26 km), Varanasi Junction Railway Station (2 km); rickshaws and boats available.",
+    importance: "Spiritual heart of India; famous for ghats, evening Ganga Aarti, and ancient temples like Kashi Vishwanath."
+  },
+  {
+    name: "Fatehpur Sikri",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/30/Buland_Darwaza_Fatehpur_Sikri.jpg",
+    description: "Abandoned Mughal capital built by Emperor Akbar, known for its red sandstone buildings and Buland Darwaza.",
+    transport: "36 km from Agra; accessible by road or rail.",
+    importance: "UNESCO site reflecting Indo-Islamic architecture and rich Mughal history."
+  },
+  {
+    name: "Ayodhya",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/77/Ayodhya_Temple.jpg",
+    description: "Ancient city and birthplace of Lord Rama, a major religious site for Hindus.",
+    transport: "Ayodhya Railway Station; nearest airport: Ayodhya Airport (opened in 2024).",
+    importance: "Home to the newly built Shri Ram Mandir and a center of Ramayana-era heritage and faith."
+  },
+  {
+    name: "Sarnath",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/06/Sarnath_Dhamekh_Stupa.jpg",
+    description: "Buddhist pilgrimage site where Lord Buddha delivered his first sermon after enlightenment.",
+    transport: "10 km from Varanasi; easily accessible by road and local transport.",
+    importance: "Houses Dhamek Stupa, Ashoka Pillar, and several Buddhist monasteries and temples."
+  },
+  {
+    name: "Jhansi Fort",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/56/Jhansi_Fort_View.jpg",
+    description: "Historical fort associated with Rani Lakshmi Bai’s brave resistance during the 1857 rebellion.",
+    transport: "Jhansi Railway Station (3 km), Gwalior Airport (100 km); taxis and autos available.",
+    importance: "Symbol of India’s struggle for independence; offers panoramic city views and museum."
+  }
+],
+  Uttarakhand:[
+  {
+    name: "Haridwar",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/41/Har_ki_Pauri_Haridwar.jpg",
+    description: "One of the seven holiest places in Hinduism, situated on the banks of the Ganges River.",
+    transport: "Nearest airport: Dehradun Jolly Grant Airport (37 km), Haridwar Railway Station in city center.",
+    importance: "Famous for Ganga Aarti at Har Ki Pauri and Kumbh Mela; spiritual gateway to the Char Dham."
+  },
+  {
+    name: "Rishikesh",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/26/Rishikesh_Laxman_Jhula.jpg",
+    description: "Yoga capital of the world and hub for adventure sports and ashram stays.",
+    transport: "Nearest airport: Dehradun (21 km), nearest railway station: Haridwar (25 km); well connected by road.",
+    importance: "Famous for spiritual retreats, Ganga river rafting, Laxman Jhula, and Beatles Ashram."
+  },
+  {
+    name: "Nainital",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/65/Nainital_Lake_View.jpg",
+    description: "Charming hill station centered around the scenic Naini Lake in the Kumaon region.",
+    transport: "Nearest railhead: Kathgodam (34 km); road access from Delhi and Dehradun.",
+    importance: "Popular for boating, cable car rides, Naina Devi Temple, and colonial-era charm."
+  },
+  {
+    name: "Mussoorie",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Mussoorie_View.jpg",
+    description: "‘Queen of the Hills’, a picturesque hill station near Dehradun offering colonial vibes and mountain views.",
+    transport: "Nearest airport: Dehradun (54 km), Dehradun Railway Station (34 km); taxis and buses available.",
+    importance: "Famous for Kempty Falls, Mall Road, Gun Hill, and as a summer getaway destination."
+  },
+  {
+    name: "Kedarnath",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Kedarnath_Temple_and_Mountains.jpg",
+    description: "Sacred Hindu temple dedicated to Lord Shiva, part of the Char Dham Yatra.",
+    transport: "Helipad access from Dehradun or trek 16 km from Gaurikund; nearest railway: Rishikesh.",
+    importance: "Spiritual epicenter set in the Himalayas; open seasonally during summer months only."
+  },
+  {
+    name: "Valley of Flowers National Park",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Valley_of_flowers_Uttarakhand_India.jpg",
+    description: "UNESCO World Heritage Site famed for alpine flora, glacial rivers, and breathtaking scenery.",
+    transport: "Nearest town: Joshimath (20 km); trekking from Govindghat after a road journey from Haridwar or Rishikesh.",
+    importance: "Biodiversity hotspot known for seasonal blooms, rare herbs, and Himalayan wildlife."
+  }
+],
+  Westbengal:[
+  {
+    name: "Victoria Memorial, Kolkata",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Victoria_Memorial%2C_Kolkata.jpg",
+    description: "Iconic white marble monument built in memory of Queen Victoria, now a museum and art gallery.",
+    transport: "Located in central Kolkata; Netaji Subhas Chandra Bose Airport (20 km), nearby metro and bus stations.",
+    importance: "Symbol of colonial architecture and home to paintings, sculptures, and British-era relics."
+  },
+  {
+    name: "Sundarbans National Park",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/18/Sundarbans_Tiger.jpg",
+    description: "World’s largest mangrove forest and a UNESCO World Heritage Site, home to the Royal Bengal Tiger.",
+    transport: "110 km from Kolkata; accessible via road to Godkhali, then boat to park area.",
+    importance: "Biodiversity hotspot with estuarine wildlife, unique ecosystem, and critical tiger habitat."
+  },
+  {
+    name: "Darjeeling",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Darjeeling_Tea_Estate.jpg",
+    description: "Scenic hill station in the Himalayas, famous for tea plantations and the Toy Train.",
+    transport: "Nearest railhead: New Jalpaiguri (NJP), nearest airport: Bagdogra (70 km); Darjeeling Himalayan Railway connects.",
+    importance: "Known for panoramic views of Kanchenjunga, colonial charm, and UNESCO Toy Train experience."
+  },
+  {
+    name: "Kalimpong",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Kalimpong_Darjeeling_West_Bengal.jpg",
+    description: "Quiet Himalayan town with monasteries, flower nurseries, and colonial-era schools.",
+    transport: "Nearest airport: Bagdogra (80 km), NJP Railway Station (75 km); taxis and buses available.",
+    importance: "Less crowded alternative to Darjeeling, popular for scenic walks, Buddhist culture, and nature tourism."
+  },
+  {
+    name: "Dakshineswar Kali Temple",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Dakshineswar_Kali_Temple%2C_Kolkata.jpg",
+    description: "Famous Hindu temple dedicated to Goddess Kali on the banks of the Hooghly River.",
+    transport: "12 km from Kolkata city center; accessible by metro, rail, road, and ferry.",
+    importance: "Spiritual site linked to saint Ramakrishna Paramahamsa; key pilgrimage and cultural landmark."
+  },
+  {
+    name: "Shantiniketan",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/55/Santiniketan_Kala_Bhavana.jpg",
+    description: "Cultural and educational hub founded by Rabindranath Tagore, home to Visva-Bharati University.",
+    transport: "160 km from Kolkata; nearest railhead: Bolpur-Shantiniketan.",
+    importance: "Famous for art, literature, Tagore's legacy, and events like Poush Mela and Basanta Utsav."
+  }
+]
+
+
+
+    
+    
   };
 
 let currentState = "";
