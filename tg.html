@@ -1681,10 +1681,11 @@ let currentState = "";
     document.getElementById("places-view").style.display = "none";
   }
 
-  function goBackToPlaces() {
-    document.getElementById("places-view").style.display = "block";
-    document.getElementById("detail-view").style.display = "none";
-  }
+  function goBackToStates() {
+  document.getElementById("state-gallery").style.display = "grid"; // Changed 'flex' to 'grid'
+  document.getElementById("places-view").style.display = "none";
+  } 
+
 
   document.querySelectorAll(".state-card").forEach(card => {
     card.addEventListener("click", () => {
